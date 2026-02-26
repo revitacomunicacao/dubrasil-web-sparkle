@@ -6,19 +6,19 @@ const steps = [
     num: "01",
     icon: Search,
     title: "Diagnóstico do cenário",
-    desc: "Entendemos a fundo a realidade da sua empresa: processos, dores, objetivos e estrutura. Sem essa etapa, qualquer solução é genérica.",
+    desc: "Entender operação e objetivo.",
   },
   {
     num: "02",
     icon: Settings,
     title: "Implantação personalizada",
-    desc: "Configuramos e implantamos as soluções sob medida para o seu contexto, com migração de dados e integração com sistemas existentes.",
+    desc: "Configuração e padronização.",
   },
   {
     num: "03",
     icon: GraduationCap,
-    title: "Treinamento e acompanhamento",
-    desc: "Capacitamos sua equipe e permanecemos ao lado — com suporte contínuo, revisões periódicas e evolução constante.",
+    title: "Treinamento e acompanhamento consultivo",
+    desc: "Uso real e ajustes finos.",
   },
 ];
 
@@ -32,9 +32,6 @@ const Method = () => {
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-foreground">
             Como entregamos na prática
           </h2>
-          <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-            Nosso método garante que cada solução seja realmente utilizada — e gere resultados.
-          </p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-3">
