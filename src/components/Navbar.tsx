@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Instagram, Linkedin } from "lucide-react";
+import logo from "@/assets/logo.png"
 
 const navLinks = [
   { label: "Sobre", href: "#sobre" },
@@ -29,7 +30,7 @@ const Navbar = () => {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <a href="#" className="flex items-center gap-2">
-          <img src="/logo.png" alt="DuBrasil Soluções" className="h-10" />
+          <img src={logo} alt="DuBrasil Soluções" className="h-10" />
         </a>
 
         {/* Desktop */}
