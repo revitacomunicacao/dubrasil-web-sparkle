@@ -5,28 +5,31 @@ const services = [
   {
     icon: Clock,
     title: "DuBrasil Serviços",
-    subtitle: "Ponto, Jornadas e Acessos",
+    subtitle: "Ponto, Jornadas e Acessos com Segurança Jurídica",
     description:
-      "Soluções completas em controle de ponto eletrônico, gestão de jornadas e controle de acesso. Equipamentos modernos, software em nuvem, consultoria trabalhista e suporte contínuo.",
-    whatsappMsg: "Olá! Gostaria de saber mais sobre as soluções de Ponto e Acesso da DuBrasil Serviços.",
+      "Rastreabilidade, padronização e conformidade trabalhista para reduzir riscos, ajustes manuais e retrabalho.",
+    ctaLabel: "Quero um diagnóstico agora",
+    whatsappMsg: "Oi! Quero um diagnóstico de Ponto/Jornadas + Controle de Acesso/Identificação.\n\nMinha operação é ( ) escritório ( ) turnos ( ) externo/campo e tenho ___ pessoas.",
     gradient: "from-primary/10 to-primary/5",
   },
   {
     icon: Server,
     title: "DuBrasil Sistemas",
-    subtitle: "ERP e Gestão de Processos",
+    subtitle: "ERP e gestão de processos para operação organizada",
     description:
-      "Sistemas ERP sob medida para automatizar e integrar processos da sua empresa. Do financeiro ao estoque, implantação completa com treinamento e acompanhamento consultivo.",
-    whatsappMsg: "Olá! Gostaria de saber mais sobre os Sistemas ERP da DuBrasil.",
+      "Mais controle sobre rotinas, financeiro e fluxo de trabalho — para decisões mais seguras e uma gestão previsível.",
+    ctaLabel: "Quero organizar minha gestão",
+    whatsappMsg: "Oi! Quero organizar minha gestão com ERP/processos.\n\nMinha prioridade é: ( ) financeiro ( ) estoque ( ) emissão/NF ( ) processos.",
     gradient: "from-primary/10 to-primary/5",
   },
   {
     icon: Headphones,
     title: "DuBrasil Nexa",
-    subtitle: "Atendimento Multicanal",
+    subtitle: "Atendimento multicanal para vender e atender com controle",
     description:
-      "Plataforma de atendimento integrada: WhatsApp, telefone, chat e redes sociais em um só lugar. PABX virtual, URA inteligente e relatórios completos para o seu time.",
-    whatsappMsg: "Olá! Gostaria de saber mais sobre o atendimento multicanal DuBrasil Nexa.",
+      "Centralize conversas, simplifique processos e encante em cada atendimento.",
+    ctaLabel: "Quero profissionalizar meu atendimento",
+    whatsappMsg: "Oi! Quero profissionalizar meu atendimento.\n\nUso hoje ( ) WhatsApp ( ) Instagram ( ) outros e tenho ___ atendentes.",
     gradient: "from-primary/10 to-primary/5",
   },
 ];
@@ -42,7 +45,7 @@ const Services = () => {
             Um grupo, três frentes de solução.
           </h2>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-            Cada empresa do grupo é especialista em uma área — mas todas trabalham juntas para entregar resultado completo ao seu negócio.
+            Cada frente resolve um ponto crítico da operação — com implantação personalizada, padronização de processos e acompanhamento consultivo.
           </p>
         </div>
 
@@ -67,7 +70,7 @@ const Services = () => {
                 className="mt-6 inline-flex items-center gap-2 rounded-full bg-whatsapp px-6 py-3 text-sm font-semibold text-whatsapp-foreground transition-all hover:brightness-110 hover:scale-105"
               >
                 <MessageCircle size={16} />
-                Falar com especialista
+                {svc.ctaLabel}
               </a>
             </div>
           ))}

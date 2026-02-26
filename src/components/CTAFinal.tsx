@@ -13,10 +13,6 @@ const CTAFinal = () => {
           Fale com um especialista e receba um direcionamento em minutos.
         </h2>
 
-        <p className="mt-6 text-lg text-primary-foreground/80 leading-relaxed">
-          Conte pra gente o que sua empresa precisa. Nosso time vai ouvir, entender e indicar a melhor solução — sem compromisso.
-        </p>
-
         <a
           href={WHATSAPP_URL}
           target="_blank"
@@ -24,7 +20,7 @@ const CTAFinal = () => {
           className="mt-10 inline-flex items-center gap-3 rounded-full bg-whatsapp px-10 py-5 text-lg font-bold text-whatsapp-foreground shadow-2xl transition-all hover:brightness-110 hover:scale-105"
         >
           <MessageCircle size={24} />
-          Falar no WhatsApp
+          Quero meu direcionamento no WhatsApp
         </a>
 
         <p className="mt-6 text-sm text-primary-foreground/60">

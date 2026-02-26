@@ -1,5 +1,4 @@
 import { useFadeUp } from "@/hooks/useFadeUp";
-import { Shield, Users, TrendingUp } from "lucide-react";
 
 const About = () => {
   const ref = useFadeUp();
@@ -7,7 +6,7 @@ const About = () => {
   return (
     <section id="sobre" className="bg-dark text-dark-foreground py-24 sm:py-32">
       <div ref={ref} className="fade-up mx-auto max-w-7xl px-6">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-20 items-center">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-20 items-start">
           <div>
             <p className="text-sm font-medium uppercase tracking-[0.15em] text-primary mb-4">
               Sobre o grupo
@@ -18,46 +17,49 @@ const About = () => {
               <span className="text-primary">parceria real.</span>
             </h2>
             <p className="mt-8 text-lg leading-relaxed text-dark-foreground/70">
-              O Grupo DuBrasil Soluções nasceu da convicção de que tecnologia só faz sentido quando bem aplicada.
-              Não vendemos sistemas — entregamos soluções implantadas, com treinamento e acompanhamento contínuo.
+              O Grupo DuBrasil Soluções é um hub de soluções que une tecnologia, implantação orientada e acompanhamento consultivo para tornar a gestão das empresas mais segura, eficiente e previsível.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-dark-foreground/70">
-              Atuamos em Uberaba - MG e atendemos empresas de diversos segmentos em todo o Brasil.
-              Nosso diferencial está no atendimento consultivo: entendemos o cenário do cliente antes de propor qualquer solução.
+              Nossa atuação nasceu da necessidade real do mercado: muitas empresas até possuem sistemas, mas continuam enfrentando retrabalho, processos despadronizados e riscos — principalmente quando o assunto envolve jornadas de trabalho, acessos, conformidade e rotina operacional. Por isso, a DuBrasil vai além da ferramenta: ajudamos a desenhar o cenário, configurar da forma correta, treinar as equipes e acompanhar o uso no dia a dia, garantindo resultado prático.
             </p>
           </div>
 
-          <div className="grid gap-6">
-            {[
-              {
-                icon: Shield,
-                title: "Gestão Segura",
-                desc: "Conformidade trabalhista, controle de acesso e processos protegidos.",
-              },
-              {
-                icon: Users,
-                title: "Atendimento Humano",
-                desc: "Equipe dedicada que entende o seu negócio de verdade.",
-              },
-              {
-                icon: TrendingUp,
-                title: "Resultado Mensurável",
-                desc: "Indicadores e relatórios para acompanhar cada evolução.",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="flex gap-5 rounded-xl bg-dark-foreground/5 p-6 transition-colors hover:bg-dark-foreground/10"
-              >
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/20">
-                  <item.icon className="text-primary" size={22} />
+          <div>
+            <p className="text-lg leading-relaxed text-dark-foreground/70 mb-6">
+              Hoje, o Grupo está estruturado em três frentes:
+            </p>
+            <div className="grid gap-4">
+              <div className="flex gap-4 rounded-xl bg-dark-foreground/5 p-5 transition-colors hover:bg-dark-foreground/10">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/20">
+                  <span className="text-primary font-bold text-sm">S</span>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-dark-foreground">{item.title}</h3>
-                  <p className="mt-1 text-sm text-dark-foreground/60">{item.desc}</p>
-                </div>
+                <p className="text-sm text-dark-foreground/70 leading-relaxed">
+                  <strong className="text-dark-foreground">DuBrasil Serviços</strong> — Gestão de Ponto e Jornadas, Controle de Acesso e Identificação Corporativa, com foco em rastreabilidade, padronização e segurança jurídica, reduzindo riscos trabalhistas e falhas operacionais.
+                </p>
               </div>
-            ))}
+              <div className="flex gap-4 rounded-xl bg-dark-foreground/5 p-5 transition-colors hover:bg-dark-foreground/10">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/20">
+                  <span className="text-primary font-bold text-sm">E</span>
+                </div>
+                <p className="text-sm text-dark-foreground/70 leading-relaxed">
+                  <strong className="text-dark-foreground">DuBrasil Sistemas</strong> — ERP e gestão de processos para organizar rotinas, integrar áreas e apoiar decisões mais seguras, com implantação alinhada à realidade de cada operação.
+                </p>
+              </div>
+              <div className="flex gap-4 rounded-xl bg-dark-foreground/5 p-5 transition-colors hover:bg-dark-foreground/10">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/20">
+                  <span className="text-primary font-bold text-sm">N</span>
+                </div>
+                <p className="text-sm text-dark-foreground/70 leading-relaxed">
+                  <strong className="text-dark-foreground">DuBrasil Nexa</strong> — Atendimento multicanal para centralizar conversas, distribuir atendimentos e aumentar controle e agilidade nas áreas de atendimento e vendas.
+                </p>
+              </div>
+            </div>
+            <p className="mt-6 text-lg leading-relaxed text-dark-foreground/70">
+              Nosso compromisso é entregar uma experiência de ponta a ponta: diagnóstico, implantação personalizada, treinamento e acompanhamento, sempre com um atendimento humanizado, claro e orientado a solução.
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-primary/80 font-medium italic">
+              Se você busca mais do que um sistema — e quer organização, rastreabilidade e tranquilidade na operação — o Grupo DuBrasil Soluções está pronto para te direcionar para o caminho certo.
+            </p>
           </div>
         </div>
       </div>

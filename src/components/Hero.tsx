@@ -8,7 +8,6 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-dark text-dark-foreground">
-      {/* Subtle gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-dark via-dark to-primary/20" />
 
       <div ref={ref} className="fade-up relative z-10 mx-auto max-w-4xl px-6 py-32 text-center">
@@ -20,9 +19,12 @@ const Hero = () => {
           Grupo DuBrasil Soluções
         </h1>
 
-        <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-dark-foreground/70 sm:text-xl">
+        <p className="mx-auto mb-4 max-w-2xl text-lg leading-relaxed text-dark-foreground/70 sm:text-xl font-medium">
           Tecnologia + implantação + acompanhamento para uma gestão mais segura e eficiente.
-          Somos um grupo de empresas especializado em conectar soluções reais às necessidades do seu negócio.
+        </p>
+
+        <p className="mx-auto mb-10 max-w-2xl text-base leading-relaxed text-dark-foreground/60 sm:text-lg">
+          Unimos soluções de jornadas e acessos, ERP e processos e atendimento multicanal, com implantação orientada e suporte consultivo — para sua operação rodar com controle, rastreabilidade e resultado prático.
         </p>
 
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -39,7 +41,7 @@ const Hero = () => {
             href="#solucoes"
             className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-lg transition-all hover:brightness-110 hover:shadow-xl hover:scale-105"
           >
-            Quero ser direcionado
+            Quero ser direcionado para a solução certa
             <ArrowRight size={18} />
           </a>
         </div>
