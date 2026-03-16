@@ -190,7 +190,7 @@ const SolucoesAlt = () => {
                     </div>
 
                     <div className="flex-1">
-                      <h3 className="hidden md:block text-2xl md:text-3xl font-bold text-white">
+                      <h3 className="hidden md:block text-2xl md:text-3xl font-bold text-foreground">
                         {p.title}
                       </h3>
                       <p className="hidden md:block mt-1 text-sm font-medium text-primary">
