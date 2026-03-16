@@ -59,9 +59,8 @@ const produtos: Produto[] = [
       "Gestão de estoque",
       "Processos organizados",
     ],
-    ctaLabel: "Quero organizar minha gestão",
-    whatsappMsg:
-      "Oi! Quero organizar minha gestão com ERP/processos.\n\nMinha prioridade é: ( ) financeiro ( ) estoque ( ) emissão/NF ( ) processos.",
+    ctaLabel: "Saiba mais",
+    ctaLink: "https://revitacomunicacao.com.br/projetos/tga/",
   },
   {
     tag: "Atendimento Multicanal",
