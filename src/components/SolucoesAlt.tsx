@@ -26,7 +26,7 @@ type Produto = {
   icon: React.ElementType;
   bullets: string[];
   ctaLabel: string;
-  whatsappMsg: string;
+  ctaLink: string;
 };
 
 const produtos: Produto[] = [
@@ -43,9 +43,8 @@ const produtos: Produto[] = [
       "Controle de acesso",
       "Conformidade trabalhista",
     ],
-    ctaLabel: "Quero um diagnóstico agora",
-    whatsappMsg:
-      "Oi! Quero um diagnóstico de Ponto/Jornadas + Controle de Acesso/Identificação.\n\nMinha operação é ( ) escritório ( ) turnos ( ) externo/campo e tenho ___ pessoas.",
+    ctaLabel: "Saiba mais",
+    ctaLink: "https://revitacomunicacao.com.br/projetos/dubrasil/",
   },
   {
     tag: "ERP & Processos",
@@ -60,9 +59,8 @@ const produtos: Produto[] = [
       "Gestão de estoque",
       "Processos organizados",
     ],
-    ctaLabel: "Quero organizar minha gestão",
-    whatsappMsg:
-      "Oi! Quero organizar minha gestão com ERP/processos.\n\nMinha prioridade é: ( ) financeiro ( ) estoque ( ) emissão/NF ( ) processos.",
+    ctaLabel: "Saiba mais",
+    ctaLink: "https://revitacomunicacao.com.br/projetos/tga/",
   },
   {
     tag: "Atendimento Multicanal",
@@ -77,9 +75,8 @@ const produtos: Produto[] = [
       "Atendimento profissional",
       "Controle de conversas",
     ],
-    ctaLabel: "Quero profissionalizar meu atendimento",
-    whatsappMsg:
-      "Oi! Quero profissionalizar meu atendimento.\n\nUso hoje ( ) WhatsApp ( ) Instagram ( ) outros e tenho ___ atendentes.",
+    ctaLabel: "Saiba mais",
+    ctaLink: "https://revitacomunicacao.com.br/nexa/",
   },
 ];
 
@@ -217,12 +214,12 @@ const SolucoesAlt = () => {
                   {/* CTA */}
                   <div className="mt-8">
                     <a
-                      href={`https://wa.me/5534999999999?text=${encodeURIComponent(p.whatsappMsg)}`}
+                      href={p.ctaLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full bg-whatsapp px-6 py-3 text-sm font-semibold text-whatsapp-foreground transition-all hover:brightness-110 hover:scale-105"
+                      className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:brightness-110 hover:scale-105"
                     >
-                      <MessageCircle size={16} />
+                      <ArrowRight size={16} />
                       {p.ctaLabel}
                     </a>
                   </div>

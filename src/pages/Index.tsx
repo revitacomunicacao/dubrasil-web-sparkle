@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Services from "@/components/Services";
+
 import About from "@/components/About";
 import Method from "@/components/Method";
 import CTAFinal from "@/components/CTAFinal";
@@ -16,7 +16,7 @@ const Index = () => (
     <Hero />
     <About />
     <SolucoesAlt />
-    <Services />
+    
     <Method />
     <ContactForm />
     <Footer />

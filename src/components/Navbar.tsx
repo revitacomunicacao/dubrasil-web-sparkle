@@ -1,13 +1,18 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { Instagram, Linkedin } from "lucide-react";
-import logo from "@/assets/logo.png"
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { label: "Sobre", href: "#sobre" },
   { label: "Soluções", href: "#solucoes" },
   { label: "Método", href: "#metodo" },
   { label: "Contato", href: "#contato" },
+];
+
+const serviceLinks = [
+  { label: "DuBrasil Serviços", href: "https://revitacomunicacao.com.br/projetos/dubrasil/" },
+  { label: "DuBrasil Sistemas", href: "https://revitacomunicacao.com.br/projetos/tga/" },
+  { label: "DuBrasil Nexa", href: "https://revitacomunicacao.com.br/nexa/" },
 ];
 
 const Navbar = () => {
@@ -39,36 +44,32 @@ const Navbar = () => {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                scrolled ? "text-foreground/80" : "text-white/90"
+              }`}
             >
               {link.label}
             </a>
           ))}
-          <div className="flex items-center gap-3 ml-4">
+          <div className="h-4 w-px bg-current opacity-20" />
+          {serviceLinks.map((link) => (
             <a
-              href="https://www.instagram.com/dubrasilsolucoes/"
+              key={link.href}
+              href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Instagram"
-              className="text-foreground/60 hover:text-primary transition-colors"
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                scrolled ? "text-foreground/80" : "text-white/90"
+              }`}
             >
-              <Instagram size={18} />
+              {link.label}
             </a>
-            <a
-              href="https://www.linkedin.com/company/dubrasilsolu%C3%A7%C3%B5es/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              className="text-foreground/60 hover:text-primary transition-colors"
-            >
-              <Linkedin size={18} />
-            </a>
-          </div>
+          ))}
         </div>
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-foreground"
+          className={`md:hidden ${scrolled ? "text-foreground" : "text-white"}`}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Menu"
         >
@@ -89,13 +90,19 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
-          <div className="flex items-center gap-4 pt-4 border-t border-border mt-2">
-            <a href="https://www.instagram.com/dubrasilsolucoes/" target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-primary">
-              <Instagram size={20} />
-            </a>
-            <a href="https://www.linkedin.com/company/dubrasilsolu%C3%A7%C3%B5es/" target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-primary">
-              <Linkedin size={20} />
-            </a>
+          <div className="border-t border-border mt-2 pt-2">
+            {serviceLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMenuOpen(false)}
+                className="block py-3 text-base font-medium text-foreground/80 hover:text-primary"
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
         </div>
       )}
