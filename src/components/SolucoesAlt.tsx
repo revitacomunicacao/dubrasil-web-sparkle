@@ -102,7 +102,7 @@ const SolucoesAlt = () => {
               <Sparkles className="h-4 w-4 text-primary" />O que oferecemos
             </div>
 
-            <h2 className="mt-5 text-3xl md:text-5xl font-bold text-section-dark-foreground">
+            <h2 className="mt-5 text-3xl md:text-5xl font-bold text-foreground">
               Um grupo, três frentes de solução.
             </h2>
 
