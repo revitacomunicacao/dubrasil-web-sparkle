@@ -207,7 +207,7 @@ const SolucoesAlt = () => {
                     {p.bullets.map((b) => (
                       <div
                         key={b}
-                        className="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-sm text-white/80"
+                        className="rounded-2xl border border-border bg-muted px-4 py-4 text-sm text-muted-foreground"
                       >
                         {b}
                       </div>
