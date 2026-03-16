@@ -160,7 +160,7 @@ const SolucoesAlt = () => {
                     <div className="absolute inset-0 ring-1 ring-inset ring-white/10" />
 
                     {/* Tag */}
-                    <div className="absolute left-6 top-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/30 px-4 py-2 text-sm text-white/80">
+                    <div className="absolute left-6 top-6 inline-flex items-center gap-2 rounded-full border border-border bg-background/80 backdrop-blur px-4 py-2 text-sm text-foreground/80">
                       <span className="h-2 w-2 rounded-full bg-primary" />
                       {p.tag}
                     </div>
