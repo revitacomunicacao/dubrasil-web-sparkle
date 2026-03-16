@@ -7,7 +7,7 @@ const CTAFinal = () => {
   const ref = useFadeUp();
 
   return (
-    <section id="contato" className="bg-primary py-24 sm:py-32">
+    <section className="bg-primary py-24 sm:py-32">
       <div ref={ref} className="fade-up mx-auto max-w-3xl px-6 text-center">
         <h2 className="text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl md:text-5xl text-balance">
           Fale com um especialista e receba um direcionamento em minutos.

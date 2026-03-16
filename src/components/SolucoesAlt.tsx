@@ -1,77 +1,85 @@
-// src/components/SolucoesAlt.tsx
-import { Link } from "react-router-dom";
 import {
   ArrowRight,
-  Layers,
   MessagesSquare,
-  Gauge,
   ShieldCheck,
+  Gauge,
   Sparkles,
+  MessageCircle,
+  Clock,
+  Server,
+  Headphones,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import fotoControle from "@/assets/Produto controle.png"
-import fotoSecullum from "@/assets/Produto secullum.png"
-import fotoRelogio from "@/assets/Produto relogio.png"
-import fotoIdentificacao from "@/assets/Produto identificacao.png"
-import fotoTga from "@/assets/tga.jpg.jpeg"
-import fotoNexa from "@/assets/nexa.jpg.jpeg"
+import fotoControle from "@/assets/Produto controle.png";
+import fotoSecullum from "@/assets/Produto secullum.png";
+import fotoRelogio from "@/assets/Produto relogio.png";
+import fotoIdentificacao from "@/assets/Produto identificacao.png";
+import fotoTga from "@/assets/tga.jpg.jpeg";
+import fotoNexa from "@/assets/nexa.jpg.jpeg";
 
 type Produto = {
   title: string;
+  subtitle: string;
   description: string;
   image: string;
-  link: string;
   tag: string;
   icon: React.ElementType;
   bullets: string[];
+  ctaLabel: string;
+  whatsappMsg: string;
 };
 
 const produtos: Produto[] = [
   {
-    tag: "Centralização",
-    title: "Secullum Web",
+    tag: "Jornadas & Acessos",
+    title: "DuBrasil Serviços",
+    subtitle: "Ponto, Jornadas e Acessos com Segurança Jurídica",
     description:
-      "A solução completa para a gestão de ponto e controle de jornadas. Software moderno e intuitivo para simplificar o controle de frequência e otimizar a rotina de RH.",
-    image:
-      fotoSecullum,
-    link: "/produtos/secullum-web",
-    icon: MessagesSquare,
+      "Rastreabilidade, padronização e conformidade trabalhista para reduzir riscos, ajustes manuais e retrabalho.",
+    image: fotoSecullum,
+    icon: Clock,
     bullets: [
       "Gestão de jornadas",
-      "Rotina de RH simplificada",
-      "Visão centralizada",
+      "Controle de acesso",
+      "Conformidade trabalhista",
     ],
+    ctaLabel: "Quero um diagnóstico agora",
+    whatsappMsg:
+      "Oi! Quero um diagnóstico de Ponto/Jornadas + Controle de Acesso/Identificação.\n\nMinha operação é ( ) escritório ( ) turnos ( ) externo/campo e tenho ___ pessoas.",
   },
   {
-    tag: "Conformidade",
-    title: "Relógio Eletrônico de Ponto (REP)",
+    tag: "ERP & Processos",
+    title: "DuBrasil Sistemas",
+    subtitle: "ERP e gestão de processos para operação organizada",
     description:
-      "Segurança e conformidade no registro das jornadas. Garante precisão, transparência e rastreabilidade no controle das horas trabalhadas.",
-    image:
-      fotoRelogio,
-    link: "/produtos/relogio-ponto",
-    icon: ShieldCheck,
+      "Mais controle sobre rotinas, financeiro e fluxo de trabalho — para decisões mais seguras e uma gestão previsível.",
+    image: fotoTga,
+    icon: Server,
     bullets: [
-      "Precisão no registro",
-      "Rastreabilidade",
-      "Conformidade e segurança",
+      "Controle financeiro",
+      "Gestão de estoque",
+      "Processos organizados",
     ],
+    ctaLabel: "Quero organizar minha gestão",
+    whatsappMsg:
+      "Oi! Quero organizar minha gestão com ERP/processos.\n\nMinha prioridade é: ( ) financeiro ( ) estoque ( ) emissão/NF ( ) processos.",
   },
   {
-    tag: "Segurança",
-    title: "Controle de Acesso",
+    tag: "Atendimento Multicanal",
+    title: "DuBrasil Nexa",
+    subtitle: "Atendimento multicanal para vender e atender com controle",
     description:
-      "Tecnologia para monitorar com eficiência e segurança. Gerencie entradas e saídas de pessoas e veículos com praticidade e confiabilidade.",
-    image:
-      fotoControle,
-    link: "/produtos/controle-acesso",
-    icon: Gauge,
+      "Centralize conversas, simplifique processos e encante em cada atendimento.",
+    image: fotoNexa,
+    icon: Headphones,
     bullets: [
-      "Entradas e saídas",
-      "Monitoramento eficiente",
-      "Confiabilidade operacional",
+      "Centralização de canais",
+      "Atendimento profissional",
+      "Controle de conversas",
     ],
+    ctaLabel: "Quero profissionalizar meu atendimento",
+    whatsappMsg:
+      "Oi! Quero profissionalizar meu atendimento.\n\nUso hoje ( ) WhatsApp ( ) Instagram ( ) outros e tenho ___ atendentes.",
   },
 ];
 
@@ -85,7 +93,7 @@ const SolucoesAlt = () => {
       id="solucoes"
       className="section-padding bg-black py-10 relative overflow-hidden"
     >
-      {/* Background decor alinhado ao “dark premium” */}
+      {/* Background decor */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -top-24 -left-24 h-80 w-80 rounded-full bg-primary/20 blur-3xl" />
         <div className="absolute -bottom-28 -right-28 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
@@ -109,29 +117,27 @@ const SolucoesAlt = () => {
             </div>
 
             <h2 className="mt-5 text-3xl md:text-5xl font-bold text-section-dark-foreground">
-              Nossas Soluções
+              Um grupo, três frentes de solução.
             </h2>
 
             <p className="mt-4 text-white/60 text-base md:text-lg leading-relaxed">
-              Uma apresentação mais elaborada e ilustrada — mantendo o visual
-              escuro, premium e as mesmas imagens do componente original.
+              Cada frente resolve um ponto crítico da operação — com implantação
+              personalizada, padronização de processos e acompanhamento
+              consultivo.
             </p>
           </div>
 
           <div className="flex items-center gap-3">
-            <Button variant="secondary" className="rounded-full">
-              Ver soluções <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-            <Button
-              variant="outline"
-              className="rounded-full border-white/15 bg-transparent text-white hover:bg-white/10"
+            <a
+              href="#contato"
+              className="inline-flex items-center gap-2 rounded-full bg-secondary px-5 py-2.5 text-sm font-semibold text-secondary-foreground transition-all hover:brightness-110"
             >
-              Falar com especialista
-            </Button>
+              Falar com especialista <ArrowRight className="ml-1 h-4 w-4" />
+            </a>
           </div>
         </div>
 
-        {/* Conteúdo: blocos alternados com imagem grande */}
+        {/* Cards alternados */}
         <div className="flex flex-col gap-10">
           {produtos.map((p, i) => {
             const Icon = p.icon;
@@ -147,14 +153,14 @@ const SolucoesAlt = () => {
                 className={cn(
                   "group relative overflow-hidden rounded-3xl border border-white/10",
                   "bg-white/[0.04] backdrop-blur",
-                  "grid gap-0 md:grid-cols-12",
+                  "grid gap-0 md:grid-cols-12"
                 )}
               >
                 {/* Image side */}
                 <div
                   className={cn(
                     "relative md:col-span-5",
-                    invert ? "md:order-2" : "md:order-1",
+                    invert ? "md:order-2" : "md:order-1"
                   )}
                 >
                   <div className="relative h-[260px] md:h-full md:min-h-[360px] overflow-hidden">
@@ -178,9 +184,9 @@ const SolucoesAlt = () => {
                       <h3 className="text-xl font-bold text-white">
                         {p.title}
                       </h3>
-                      <div className="mt-2 inline-flex items-center gap-2 text-primary font-semibold text-sm">
-                        Saiba mais <ArrowRight size={16} />
-                      </div>
+                      <p className="mt-1 text-sm text-primary font-medium">
+                        {p.subtitle}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -189,7 +195,7 @@ const SolucoesAlt = () => {
                 <div
                   className={cn(
                     "p-8 md:p-12 md:col-span-7",
-                    invert ? "md:order-1" : "md:order-2",
+                    invert ? "md:order-1" : "md:order-2"
                   )}
                 >
                   <div className="flex items-start gap-4">
@@ -201,6 +207,9 @@ const SolucoesAlt = () => {
                       <h3 className="hidden md:block text-2xl md:text-3xl font-bold text-white">
                         {p.title}
                       </h3>
+                      <p className="hidden md:block mt-1 text-sm font-medium text-primary">
+                        {p.subtitle}
+                      </p>
                       <p className="mt-0 md:mt-3 text-white/60 leading-relaxed">
                         {p.description}
                       </p>
@@ -220,29 +229,18 @@ const SolucoesAlt = () => {
                   </div>
 
                   {/* CTA */}
-                  <div className="mt-8 flex flex-wrap items-center gap-4">
-                    <Link
-                      to={p.link}
-                      className="inline-flex items-center gap-2 text-primary font-semibold text-sm group-hover:gap-3 transition-all"
+                  <div className="mt-8">
+                    <a
+                      href={`https://wa.me/5534999999999?text=${encodeURIComponent(p.whatsappMsg)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-full bg-whatsapp px-6 py-3 text-sm font-semibold text-whatsapp-foreground transition-all hover:brightness-110 hover:scale-105"
                     >
-                      Saiba mais <ArrowRight size={16} />
-                    </Link>
-
-                    <Link
-                      to={p.link}
-                      className="text-sm text-white/70 hover:text-white transition-colors"
-                    >
-                      Ver detalhes do produto
-                    </Link>
+                      <MessageCircle size={16} />
+                      {p.ctaLabel}
+                    </a>
                   </div>
                 </div>
-
-                {/* Whole-card link overlay (mantém UX similar ao original) */}
-                <Link
-                  to={p.link}
-                  className="absolute inset-0"
-                  aria-label={`Abrir ${p.title}`}
-                />
               </motion.article>
             );
           })}
