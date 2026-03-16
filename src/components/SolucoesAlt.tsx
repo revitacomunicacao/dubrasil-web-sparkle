@@ -91,36 +91,22 @@ const SolucoesAlt = () => {
   return (
     <section
       id="solucoes"
-      className="section-padding bg-black py-10 relative overflow-hidden"
+      className="section-padding bg-background py-24 sm:py-32 relative overflow-hidden"
     >
-      {/* Background decor */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-24 -left-24 h-80 w-80 rounded-full bg-primary/20 blur-3xl" />
-        <div className="absolute -bottom-28 -right-28 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
-        <div
-          className="absolute inset-0 opacity-[0.10]"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 1px 1px, rgba(255,255,255,0.22) 1px, transparent 0)",
-            backgroundSize: "28px 28px",
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/40" />
-      </div>
 
       <div className="relative container mx-auto">
         {/* Header */}
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between mb-14 md:mb-16">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/80">
+            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-muted px-4 py-2 text-sm text-muted-foreground">
               <Sparkles className="h-4 w-4 text-primary" />O que oferecemos
             </div>
 
-            <h2 className="mt-5 text-3xl md:text-5xl font-bold text-section-dark-foreground">
+            <h2 className="mt-5 text-3xl md:text-5xl font-bold text-foreground">
               Um grupo, três frentes de solução.
             </h2>
 
-            <p className="mt-4 text-white/60 text-base md:text-lg leading-relaxed">
+            <p className="mt-4 text-muted-foreground text-base md:text-lg leading-relaxed">
               Cada frente resolve um ponto crítico da operação — com implantação
               personalizada, padronização de processos e acompanhamento
               consultivo.
@@ -151,8 +137,8 @@ const SolucoesAlt = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08, duration: 0.55 }}
                 className={cn(
-                  "group relative overflow-hidden rounded-3xl border border-white/10",
-                  "bg-white/[0.04] backdrop-blur",
+                  "group relative overflow-hidden rounded-3xl border border-border",
+                  "bg-gradient-to-br from-primary/10 to-primary/5",
                   "grid gap-0 md:grid-cols-12"
                 )}
               >
@@ -174,14 +160,14 @@ const SolucoesAlt = () => {
                     <div className="absolute inset-0 ring-1 ring-inset ring-white/10" />
 
                     {/* Tag */}
-                    <div className="absolute left-6 top-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/30 px-4 py-2 text-sm text-white/80">
+                    <div className="absolute left-6 top-6 inline-flex items-center gap-2 rounded-full border border-border bg-background/80 backdrop-blur px-4 py-2 text-sm text-foreground/80">
                       <span className="h-2 w-2 rounded-full bg-primary" />
                       {p.tag}
                     </div>
 
                     {/* Title overlay (mobile) */}
                     <div className="absolute bottom-5 left-6 right-6 md:hidden">
-                      <h3 className="text-xl font-bold text-white">
+                      <h3 className="text-xl font-bold text-foreground">
                         {p.title}
                       </h3>
                       <p className="mt-1 text-sm text-primary font-medium">
@@ -199,18 +185,18 @@ const SolucoesAlt = () => {
                   )}
                 >
                   <div className="flex items-start gap-4">
-                    <div className="rounded-2xl border border-white/10 bg-white/5 p-3">
+                    <div className="rounded-2xl border border-border bg-primary/10 p-3">
                       <Icon className="h-5 w-5 text-primary" />
                     </div>
 
                     <div className="flex-1">
-                      <h3 className="hidden md:block text-2xl md:text-3xl font-bold text-white">
+                      <h3 className="hidden md:block text-2xl md:text-3xl font-bold text-foreground">
                         {p.title}
                       </h3>
                       <p className="hidden md:block mt-1 text-sm font-medium text-primary">
                         {p.subtitle}
                       </p>
-                      <p className="mt-0 md:mt-3 text-white/60 leading-relaxed">
+                      <p className="mt-0 md:mt-3 text-muted-foreground leading-relaxed">
                         {p.description}
                       </p>
                     </div>
@@ -221,7 +207,7 @@ const SolucoesAlt = () => {
                     {p.bullets.map((b) => (
                       <div
                         key={b}
-                        className="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-sm text-white/80"
+                        className="rounded-2xl border border-border bg-muted px-4 py-4 text-sm text-muted-foreground"
                       >
                         {b}
                       </div>
