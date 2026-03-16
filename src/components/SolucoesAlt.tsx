@@ -196,7 +196,7 @@ const SolucoesAlt = () => {
                       <p className="hidden md:block mt-1 text-sm font-medium text-primary">
                         {p.subtitle}
                       </p>
-                      <p className="mt-0 md:mt-3 text-white/60 leading-relaxed">
+                      <p className="mt-0 md:mt-3 text-muted-foreground leading-relaxed">
                         {p.description}
                       </p>
                     </div>
