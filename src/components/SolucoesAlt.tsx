@@ -75,9 +75,8 @@ const produtos: Produto[] = [
       "Atendimento profissional",
       "Controle de conversas",
     ],
-    ctaLabel: "Quero profissionalizar meu atendimento",
-    whatsappMsg:
-      "Oi! Quero profissionalizar meu atendimento.\n\nUso hoje ( ) WhatsApp ( ) Instagram ( ) outros e tenho ___ atendentes.",
+    ctaLabel: "Saiba mais",
+    ctaLink: "https://revitacomunicacao.com.br/nexa/",
   },
 ];
 
