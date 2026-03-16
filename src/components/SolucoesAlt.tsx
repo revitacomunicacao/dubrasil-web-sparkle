@@ -91,22 +91,8 @@ const SolucoesAlt = () => {
   return (
     <section
       id="solucoes"
-      className="section-padding bg-black py-10 relative overflow-hidden"
+      className="section-padding bg-background py-24 sm:py-32 relative overflow-hidden"
     >
-      {/* Background decor */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-24 -left-24 h-80 w-80 rounded-full bg-primary/20 blur-3xl" />
-        <div className="absolute -bottom-28 -right-28 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
-        <div
-          className="absolute inset-0 opacity-[0.10]"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 1px 1px, rgba(255,255,255,0.22) 1px, transparent 0)",
-            backgroundSize: "28px 28px",
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/40" />
-      </div>
 
       <div className="relative container mx-auto">
         {/* Header */}
