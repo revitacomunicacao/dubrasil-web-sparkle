@@ -137,8 +137,8 @@ const SolucoesAlt = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08, duration: 0.55 }}
                 className={cn(
-                  "group relative overflow-hidden rounded-3xl border border-white/10",
-                  "bg-white/[0.04] backdrop-blur",
+                  "group relative overflow-hidden rounded-3xl border border-border",
+                  "bg-gradient-to-br from-primary/10 to-primary/5",
                   "grid gap-0 md:grid-cols-12"
                 )}
               >
