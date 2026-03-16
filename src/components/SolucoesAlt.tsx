@@ -167,7 +167,7 @@ const SolucoesAlt = () => {
 
                     {/* Title overlay (mobile) */}
                     <div className="absolute bottom-5 left-6 right-6 md:hidden">
-                      <h3 className="text-xl font-bold text-white">
+                      <h3 className="text-xl font-bold text-foreground">
                         {p.title}
                       </h3>
                       <p className="mt-1 text-sm text-primary font-medium">
