@@ -1,5 +1,6 @@
 import { MessageCircle, ArrowRight } from "lucide-react";
 import { useFadeUp } from "@/hooks/useFadeUp";
+import bgdubrasil from "@/assets/bgdubrasil.jpeg"
 
 const WHATSAPP_URL = "https://wa.me/5534999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20soluções%20da%20DuBrasil.";
 
@@ -7,7 +8,10 @@ const Hero = () => {
   const ref = useFadeUp();
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-dark text-dark-foreground">
+    <section 
+    className="relative min-h-screen flex items-center justify-center overflow-hidden text-dark-foreground"
+    style={{ backgroundImage: `url(${bgdubrasil})` }}
+    >
       <div className="absolute inset-0 bg-gradient-to-br from-dark via-dark to-primary/20" />
 
       <div ref={ref} className="fade-up relative z-10 mx-auto max-w-4xl px-6 py-32 text-center">
