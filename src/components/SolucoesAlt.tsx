@@ -214,12 +214,12 @@ const SolucoesAlt = () => {
                   {/* CTA */}
                   <div className="mt-8">
                     <a
-                      href={`https://wa.me/5534999999999?text=${encodeURIComponent(p.whatsappMsg)}`}
+                      href={p.ctaLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full bg-whatsapp px-6 py-3 text-sm font-semibold text-whatsapp-foreground transition-all hover:brightness-110 hover:scale-105"
+                      className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:brightness-110 hover:scale-105"
                     >
-                      <MessageCircle size={16} />
+                      <ArrowRight size={16} />
                       {p.ctaLabel}
                     </a>
                   </div>
