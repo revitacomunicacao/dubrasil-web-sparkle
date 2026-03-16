@@ -185,7 +185,7 @@ const SolucoesAlt = () => {
                   )}
                 >
                   <div className="flex items-start gap-4">
-                    <div className="rounded-2xl border border-white/10 bg-white/5 p-3">
+                    <div className="rounded-2xl border border-border bg-primary/10 p-3">
                       <Icon className="h-5 w-5 text-primary" />
                     </div>
 
