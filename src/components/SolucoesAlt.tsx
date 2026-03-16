@@ -106,7 +106,7 @@ const SolucoesAlt = () => {
               Um grupo, três frentes de solução.
             </h2>
 
-            <p className="mt-4 text-white/60 text-base md:text-lg leading-relaxed">
+            <p className="mt-4 text-muted-foreground text-base md:text-lg leading-relaxed">
               Cada frente resolve um ponto crítico da operação — com implantação
               personalizada, padronização de processos e acompanhamento
               consultivo.
