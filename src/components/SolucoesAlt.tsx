@@ -26,7 +26,7 @@ type Produto = {
   icon: React.ElementType;
   bullets: string[];
   ctaLabel: string;
-  whatsappMsg: string;
+  ctaLink: string;
 };
 
 const produtos: Produto[] = [
