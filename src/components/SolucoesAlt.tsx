@@ -43,9 +43,8 @@ const produtos: Produto[] = [
       "Controle de acesso",
       "Conformidade trabalhista",
     ],
-    ctaLabel: "Quero um diagnóstico agora",
-    whatsappMsg:
-      "Oi! Quero um diagnóstico de Ponto/Jornadas + Controle de Acesso/Identificação.\n\nMinha operação é ( ) escritório ( ) turnos ( ) externo/campo e tenho ___ pessoas.",
+    ctaLabel: "Saiba mais",
+    ctaLink: "https://revitacomunicacao.com.br/projetos/dubrasil/",
   },
   {
     tag: "ERP & Processos",
