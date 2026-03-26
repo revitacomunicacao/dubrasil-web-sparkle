@@ -1,8 +1,6 @@
-import { MessageCircle, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useFadeUp } from "@/hooks/useFadeUp";
 import bgdubrasil from "@/assets/bgdubrasil.jpeg"
-
-const WHATSAPP_URL = "https://wa.me/5534999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20soluções%20da%20DuBrasil.";
 
 const Hero = () => {
   const ref = useFadeUp();
@@ -31,18 +29,9 @@ const Hero = () => {
           Unimos soluções de jornadas e acessos, ERP e processos e atendimento multicanal, com implantação orientada e suporte consultivo para sua operação rodar com controle, rastreabilidade e resultado prático.
         </p>
 
-        <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <div className="flex justify-center">
           <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-whatsapp px-8 py-4 text-base font-semibold text-whatsapp-foreground shadow-lg transition-all hover:brightness-110 hover:shadow-xl hover:scale-105"
-          >
-            <MessageCircle size={20} />
-            Falar no WhatsApp
-          </a>
-          <a
-            href="#solucoes"
+            href="#contato"
             className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-lg transition-all hover:brightness-110 hover:shadow-xl hover:scale-105"
           >
             Quero ser direcionado para a solução certa

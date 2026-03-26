@@ -1,7 +1,5 @@
-import { MessageCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useFadeUp } from "@/hooks/useFadeUp";
-
-const WHATSAPP_URL = "https://wa.me/5534999999999?text=Olá!%20Gostaria%20de%20falar%20com%20um%20especialista%20da%20DuBrasil.";
 
 const CTAFinal = () => {
   const ref = useFadeUp();
@@ -14,13 +12,11 @@ const CTAFinal = () => {
         </h2>
 
         <a
-          href={WHATSAPP_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-10 inline-flex items-center gap-3 rounded-full bg-whatsapp px-10 py-5 text-lg font-bold text-whatsapp-foreground shadow-2xl transition-all hover:brightness-110 hover:scale-105"
+          href="#contato"
+          className="mt-10 inline-flex items-center gap-3 rounded-full bg-dark px-10 py-5 text-lg font-bold text-dark-foreground shadow-2xl transition-all hover:brightness-110 hover:scale-105"
         >
-          <MessageCircle size={24} />
-          Quero meu direcionamento no WhatsApp
+          Quero meu direcionamento
+          <ArrowRight size={20} />
         </a>
 
         <p className="mt-6 text-sm text-primary-foreground/60">
