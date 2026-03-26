@@ -1,10 +1,6 @@
 import {
   ArrowRight,
-  MessagesSquare,
-  ShieldCheck,
-  Gauge,
   Sparkles,
-  MessageCircle,
   Clock,
   Server,
   Headphones,
@@ -51,7 +47,7 @@ const produtos: Produto[] = [
     title: "DuBrasil Sistemas",
     subtitle: "ERP e gestão de processos para operação organizada",
     description:
-      "Mais controle sobre rotinas, financeiro e fluxo de trabalho — para decisões mais seguras e uma gestão previsível.",
+      "Mais controle sobre rotinas, financeiro e fluxo de trabalho para decisões mais seguras e uma gestão previsível.",
     image: fotoTga,
     icon: Server,
     bullets: [
@@ -104,9 +100,9 @@ const SolucoesAlt = () => {
             </h2>
 
             <p className="mt-4 text-muted-foreground text-base md:text-lg leading-relaxed">
-              Cada frente resolve um ponto crítico da operação — com implantação
+              Cada frente resolve um ponto crítico da operação com implantação
               personalizada, padronização de processos e acompanhamento
-              consultivo.
+              consultivo. Esse é o nosso <strong className="text-primary">diferencial</strong>.
             </p>
           </div>
 

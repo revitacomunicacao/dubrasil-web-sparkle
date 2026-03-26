@@ -28,7 +28,7 @@ const Hero = () => {
         </p>
 
         <p className="mx-auto mb-10 max-w-2xl text-base leading-relaxed text-dark-foreground/60 sm:text-lg">
-          Unimos soluções de jornadas e acessos, ERP e processos e atendimento multicanal, com implantação orientada e suporte consultivo — para sua operação rodar com controle, rastreabilidade e resultado prático.
+          Unimos soluções de jornadas e acessos, ERP e processos e atendimento multicanal, com implantação orientada e suporte consultivo para sua operação rodar com controle, rastreabilidade e resultado prático.
         </p>
 
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
