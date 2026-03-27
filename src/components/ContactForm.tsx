@@ -62,7 +62,7 @@ const ContactForm = () => {
   return (
     <section
       id="contato"
-      className="relative py-24 bg-cover bg-center"
+      className="relative py-24 bg-cover bg-center overflow-hidden"
       style={{ backgroundImage: `url(${nexaBG})` }}
     >
       <div className="absolute inset-0 bg-black/40" />

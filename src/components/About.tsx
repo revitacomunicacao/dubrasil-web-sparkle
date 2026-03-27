@@ -1,4 +1,5 @@
 import { useFadeUp } from "@/hooks/useFadeUp";
+import imgParceriaReal from "@/assets/Mais do que tecnologia - parceria real.jpeg";
 
 const About = () => {
   const ref1 = useFadeUp();
@@ -6,7 +7,7 @@ const About = () => {
   const ref3 = useFadeUp();
 
   return (
-    <section id="sobre" className="bg-[#002147] text-dark-foreground py-24 sm:py-32">
+    <section id="sobre" className="bg-[#002147] text-dark-foreground py-24 sm:py-32 text-justify">
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
         <div ref={ref1} className="fade-up max-w-3xl mx-auto text-center mb-20">
@@ -28,14 +29,22 @@ const About = () => {
           <p className="text-lg sm:text-xl leading-relaxed text-dark-foreground/70">
             Nossa atuação nasceu da necessidade real do mercado: muitas empresas até possuem sistemas, mas continuam enfrentando retrabalho, processos despadronizados e riscos, principalmente quando o assunto envolve jornadas de trabalho, acessos, conformidade e rotina operacional.
           </p>
+          <div className="overflow-hidden rounded-2xl border border-white/10">
+            <img
+              src={imgParceriaReal}
+              alt="Mais do que tecnologia: parceria real"
+              className="w-full h-auto object-cover"
+              loading="lazy"
+            />
+          </div>
           <p className="text-lg sm:text-xl leading-relaxed text-dark-foreground/70">
             Por isso, a DuBrasil vai além da ferramenta: ajudamos a desenhar o cenário, configurar da forma correta, treinar as equipes e acompanhar o uso no dia a dia, garantindo resultado prático.
           </p>
         </div>
 
         {/* Differentiator highlight */}
-        <div ref={ref3} className="fade-up max-w-4xl mx-auto">
-          <div className="rounded-2xl bg-dark-foreground/5 p-8 sm:p-12 text-center">
+        <div ref={ref3} className="fade-up max-w-4xl mx-auto mt-[-50px]">
+          <div className="rounded-2xl bg-dark-foreground/5 px-8 py-4 sm:px-12 sm:py-6 text-center">
             <p className="text-xl sm:text-2xl leading-relaxed text-dark-foreground/80">
               Esse é o nosso <strong className="text-primary">diferencial</strong>: não entregamos apenas software, entregamos <strong className="text-primary">resultado</strong>.
             </p>

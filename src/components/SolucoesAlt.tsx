@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import fotoControle from "@/assets/Produto controle.png";
-import fotoSecullum from "@/assets/Produto secullum.png";
+import fotoSecullum from "@/assets/Produto identificacao.png";
 import fotoRelogio from "@/assets/Produto relogio.png";
 import fotoIdentificacao from "@/assets/Produto identificacao.png";
 import fotoTga from "@/assets/tga.jpg.jpeg";
@@ -16,7 +16,7 @@ import fotoNexa from "@/assets/nexa.jpg.jpeg";
 type Produto = {
   title: string;
   subtitle: string;
-  description: string;
+  description: React.ReactNode;
   image: string;
   tag: string;
   icon: React.ElementType;
@@ -62,8 +62,13 @@ const produtos: Produto[] = [
     tag: "Atendimento Multicanal",
     title: "DuBrasil Nexa",
     subtitle: "Atendimento multicanal para vender e atender com controle",
-    description:
-      "Centralize conversas, simplifique processos e encante em cada atendimento.",
+    description: (
+      <>
+        Centralize conversas, simplifique processos e
+        <br />
+        encante em cada atendimento.
+      </>
+    ),
     image: fotoNexa,
     icon: Headphones,
     bullets: [
@@ -89,8 +94,8 @@ const SolucoesAlt = () => {
 
       <div className="relative container mx-auto">
         {/* Header */}
-        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between mb-14 md:mb-16">
-          <div className="max-w-2xl">
+        <div className="mb-14 md:mb-16">
+          <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-muted px-4 py-2 text-sm text-muted-foreground">
               <Sparkles className="h-4 w-4 text-primary" />O que oferecemos
             </div>
@@ -104,15 +109,6 @@ const SolucoesAlt = () => {
               personalizada, padronização de processos e acompanhamento
               consultivo. Esse é o nosso <strong className="text-primary">diferencial</strong>.
             </p>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <a
-              href="#contato"
-              className="inline-flex items-center gap-2 rounded-full bg-secondary px-5 py-2.5 text-sm font-semibold text-secondary-foreground transition-all hover:brightness-110"
-            >
-              Falar com especialista <ArrowRight className="ml-1 h-4 w-4" />
-            </a>
           </div>
         </div>
 
@@ -131,7 +127,7 @@ const SolucoesAlt = () => {
                 transition={{ delay: i * 0.08, duration: 0.55 }}
                 className={cn(
                   "group relative overflow-hidden rounded-3xl border border-border",
-                  "bg-gradient-to-br from-primary/10 to-primary/5",
+                  "bg-gradient-to-br from-[#071322] to-[#002147]",
                   "grid gap-0 md:grid-cols-12"
                 )}
               >
@@ -146,7 +142,7 @@ const SolucoesAlt = () => {
                     <img
                       src={p.image}
                       alt={p.title}
-                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.06]"
+                      className="absolute inset-0 h-full w-full object-cover"
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent" />
@@ -183,7 +179,7 @@ const SolucoesAlt = () => {
                     </div>
 
                     <div className="flex-1">
-                      <h3 className="hidden md:block text-2xl md:text-3xl font-bold text-foreground">
+                      <h3 className="hidden md:block text-2xl md:text-3xl font-bold text-white">
                         {p.title}
                       </h3>
                       <p className="hidden md:block mt-1 text-sm font-medium text-primary">
@@ -200,7 +196,7 @@ const SolucoesAlt = () => {
                     {p.bullets.map((b) => (
                       <div
                         key={b}
-                        className="rounded-2xl border border-border bg-muted px-4 py-4 text-sm text-muted-foreground"
+                        className="rounded-2xl bg-muted/50 px-4 py-4 text-sm text-white"
                       >
                         {b}
                       </div>

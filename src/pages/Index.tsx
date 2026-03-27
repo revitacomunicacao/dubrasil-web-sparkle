@@ -8,6 +8,7 @@ import ContactForm from "@/components/ContactForm";
 import Hero2 from "@/components/Hero2";
 import SolucoesAlt from "@/components/SolucoesAlt";
 import Testimonials from "@/components/Testimonials";
+import FAQ from "@/components/FAQ";
 
 const Index = () => (
   <div className="min-h-screen">
@@ -18,6 +19,7 @@ const Index = () => (
     <SolucoesAlt />
     <Method />
     <Testimonials />
+    <FAQ />
     <ContactForm />
     <Footer />
   </div>

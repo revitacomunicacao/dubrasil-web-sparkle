@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Search, Settings, GraduationCap, ArrowRight } from "lucide-react";
-import imgDiagnostico from "@/assets/method-diagnostico.jpg";
-import imgImplantacao from "@/assets/method-implantacao.jpg";
-import imgAcompanhamento from "@/assets/method-acompanhamento.jpg";
+import imgDiagnostico from "@/assets/method-diagnostico.jpeg";
+import imgImplantacao from "@/assets/method-implantacao.jpeg";
+import imgAcompanhamento from "@/assets/method-acompanhamento.jpeg";
 
 const steps = [
   {
