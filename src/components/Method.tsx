@@ -46,7 +46,7 @@ const Method = () => {
           transition={{ duration: 0.6 }}
           className="mx-auto max-w-3xl text-center mb-20 sm:mb-28"
         >
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-4">
+          <p className="text-[16px] font-semibold uppercase tracking-[0.2em] text-primary mb-4">
             Nosso método
           </p>
           <h2 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
@@ -54,7 +54,7 @@ const Method = () => {
             <br />
             <span className="text-primary">na prática.</span>
           </h2>
-          <p className="mt-6 text-lg text-white/60 leading-relaxed max-w-xl mx-auto">
+          <p className="mt-6 text-[20px] text-white leading-relaxed max-w-xl mx-auto">
             Três etapas que garantem <strong className="text-primary">resultado real</strong>: da análise inicial ao acompanhamento contínuo. Esse é o <strong className="text-primary">diferencial</strong> que transforma tecnologia em impacto.
           </p>
         </motion.div>
@@ -99,11 +99,11 @@ const Method = () => {
                     </span>
                   </div>
 
-                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight">
+                  <h3 className="text-[26px] sm:text-[32px] lg:text-[38px] font-bold leading-tight">
                     {step.title}
                   </h3>
 
-                  <p className="mt-4 text-lg text-white/60 leading-relaxed">
+                  <p className="mt-4 text-[20px] text-white leading-relaxed">
                     {step.desc}
                   </p>
 

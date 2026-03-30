@@ -19,7 +19,6 @@ const Index = () => (
     <SolucoesAlt />
     <Method />
     <Testimonials />
-    <FAQ />
     <ContactForm />
     <Footer />
   </div>

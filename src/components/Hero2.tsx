@@ -8,24 +8,20 @@ import video3 from "@/assets/video3.mp4"
 interface Slide {
   videoUrl: string;
   title: string;
-  subtitle: string;
 }
 
 const slides: Slide[] = [
   {
     videoUrl: video1,
-    title: "Controle de Acesso",
-    subtitle: "Registramos o ponto do seu colaborador onde você nem imagina",
+    title: "Registramos o ponto do seu colaborador onde você nem imagina",
   },
   {
     videoUrl: video2,
-    title: "Atendimento humanizado",
-    subtitle: "Aqui humanos são atendidos por Humanos",
+    title: "Aqui humanos são atendidos por Humanos",
   },
   {
     videoUrl: video3,
-    title: "Identificação Corporativa",
-    subtitle: "Transformando o registro de ponto com simplicidade e máxima segurança",
+    title: "Transformando o registro de ponto com simplicidade e máxima segurança",
   },
 ];
 
@@ -70,22 +66,9 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 h-full flex items-end pb-32">
         <div className="container mx-auto">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-4 max-w-3xl">
+          <h1 className="text-[34px] md:text-[38px] lg:text-[50px] font-display font-bold text-white mb-4 max-w-2xl">
             {slides[current].title}
           </h1>
-          <p className="text-lg md:text-xl text-white/80 max-w-xl mb-8">
-            {slides[current].subtitle}
-          </p>
-          <a
-            href="#solucoes"
-            onClick={(e) => {
-              e.preventDefault();
-              document.querySelector("#solucoes")?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold text-lg hover:bg-primary/90 transition-colors"
-          >
-            Conheça nossas soluções
-          </a>
         </div>
       </div>
 
