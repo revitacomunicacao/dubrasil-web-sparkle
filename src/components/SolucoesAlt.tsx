@@ -6,12 +6,9 @@ import {
   Headphones,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import fotoControle from "@/assets/Produto controle.png";
-import fotoSecullum from "@/assets/Produto identificacao.png";
-import fotoRelogio from "@/assets/Produto relogio.png";
-import fotoIdentificacao from "@/assets/Produto identificacao.png";
-import fotoTga from "@/assets/tga.jpg.jpeg";
-import fotoNexa from "@/assets/nexa.jpg.jpeg";
+import fotoSecullum from "@/assets/DuBrasil Serviços.jpg.jpeg";
+import fotoTga from "@/assets/DuBrasil Sistemas.jpg.jpeg";
+import fotoNexa from "@/assets/DuBrasil Nexa.jpg.jpeg";
 
 type Produto = {
   title: string;
@@ -134,7 +131,7 @@ const SolucoesAlt = () => {
                 {/* Image side */}
                 <div
                   className={cn(
-                    "relative md:col-span-5",
+                    "relative md:col-span-4",
                     invert ? "md:order-2" : "md:order-1"
                   )}
                 >
@@ -142,17 +139,10 @@ const SolucoesAlt = () => {
                     <img
                       src={p.image}
                       alt={p.title}
-                      className="absolute inset-0 h-full w-full object-cover"
+                      className="absolute inset-0 h-full w-full object-contain"
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent" />
-                    <div className="absolute inset-0 ring-1 ring-inset ring-white/10" />
-
-                    {/* Tag */}
-                    <div className="absolute left-6 top-6 inline-flex items-center gap-2 rounded-full border border-border bg-background/80 backdrop-blur px-4 py-2 text-sm text-foreground/80">
-                      <span className="h-2 w-2 rounded-full bg-primary" />
-                      {p.tag}
-                    </div>
 
                     {/* Title overlay (mobile) */}
                     <div className="absolute bottom-5 left-6 right-6 md:hidden">
@@ -169,7 +159,7 @@ const SolucoesAlt = () => {
                 {/* Content side */}
                 <div
                   className={cn(
-                    "p-8 md:p-12 md:col-span-7",
+                    "p-8 md:p-12 md:col-span-8",
                     invert ? "md:order-1" : "md:order-2"
                   )}
                 >
