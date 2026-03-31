@@ -6,7 +6,7 @@ import {
   Headphones,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import fotoSecullum from "@/assets/DuBrasil Serviços.jpg.jpeg";
+import fotoSecullum from "@/assets/servicos.jpeg";
 import fotoTga from "@/assets/DuBrasil Sistemas.jpg.jpeg";
 import fotoNexa from "@/assets/DuBrasil Nexa.jpg.jpeg";
 
