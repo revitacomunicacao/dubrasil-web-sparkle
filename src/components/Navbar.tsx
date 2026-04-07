@@ -10,7 +10,7 @@ const navLinks = [
 ];
 
 const serviceLinks = [
-  { label: "DuBrasil Serviços", href: "https://revitacomunicacao.com.br/projetos/dubrasil/" },
+  { label: "DuBrasil Jornadas", href: "https://revitacomunicacao.com.br/projetos/dubrasil-jornadas/" },
   { label: "DuBrasil Sistemas", href: "https://revitacomunicacao.com.br/projetos/tga/" },
   { label: "DuBrasil Nexa", href: "https://revitacomunicacao.com.br/nexa/" },
 ];
@@ -29,7 +29,7 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-xl shadow-sm"
+          ? "bg-[#d6d6d6] shadow-sm"
           : "bg-transparent"
       }`}
     >
