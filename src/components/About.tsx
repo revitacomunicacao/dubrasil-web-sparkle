@@ -94,10 +94,10 @@ const About = () => {
           <p className="mb-4 text-sm font-medium uppercase tracking-[0.15em] text-white/90">
             Sobre o grupo
           </p>
-          <h2 className="mb-6 text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-5xl">
-            Mais do que tecnologia:
+          <h2 className="mb-6 text-3xl leading-tight tracking-tight sm:text-4xl md:text-5xl">
+            <span className="font-light">Mais do que tecnologia:</span>
             <br />
-            <span className="text-white/95">parceria real.</span>
+            <span className="font-extrabold text-primary">parceria real.</span>
           </h2>
           <p className="text-lg leading-relaxed text-white/95 sm:text-xl">
             O Grupo DuBrasil Soluções é um hub de soluções que une tecnologia, implantação orientada e acompanhamento consultivo para tornar a gestão das empresas mais segura, eficiente e previsível.

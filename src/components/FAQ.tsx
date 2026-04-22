@@ -53,8 +53,9 @@ const FAQ = () => {
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-4">
             FAQ
           </p>
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-foreground">
-            Perguntas frequentes
+          <h2 className="text-3xl tracking-tight sm:text-4xl md:text-5xl text-foreground leading-[1.05]">
+            <span className="font-light">Perguntas </span>
+            <span className="font-extrabold text-primary">frequentes</span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
             Respostas rapidas sobre como o Grupo DuBrasil Solucoes atua para

@@ -17,8 +17,10 @@ const Hero = () => {
           Tecnologia &bull; Implantação &bull; Acompanhamento
         </p>
 
-        <h1 className="mb-6 text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-balance">
-          Grupo DuBrasil Soluções
+        <h1 className="mb-6 text-4xl leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-balance">
+          <span className="font-light">Grupo </span>
+          <span className="font-extrabold text-primary">DuBrasil</span>
+          <span className="font-light"> Soluções</span>
         </h1>
 
         <p className="mx-auto mb-4 max-w-2xl text-lg leading-relaxed text-dark-foreground/70 sm:text-xl font-medium">

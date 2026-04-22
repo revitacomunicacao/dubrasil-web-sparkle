@@ -8,20 +8,24 @@ import video3 from "@/assets/video3.mp4"
 interface Slide {
   videoUrl: string;
   title: string;
+  highlight?: string;
 }
 
 const slides: Slide[] = [
   {
     videoUrl: video1,
-    title: "Registramos o ponto do seu colaborador onde você nem imagina",
+    title: "Registramos o ponto do seu colaborador",
+    highlight: "onde você nem imagina",
   },
   {
     videoUrl: video2,
-    title: "Aqui humanos são atendidos por Humanos",
+    title: "Aqui humanos são atendidos",
+    highlight: "por Humanos",
   },
   {
     videoUrl: video3,
-    title: "Transformando o registro de ponto com simplicidade e máxima segurança",
+    title: "Transformando o registro de ponto",
+    highlight: "com simplicidade e máxima segurança",
   },
 ];
 
@@ -66,8 +70,13 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 h-full flex items-end pb-32">
         <div className="container mx-auto">
-          <h1 className="text-[34px] md:text-[38px] lg:text-[50px] font-display font-bold text-white mb-4 max-w-2xl">
-            {slides[current].title}
+          <h1 className="text-[34px] md:text-[38px] lg:text-[50px] font-display tracking-tight text-white mb-4 max-w-2xl leading-[1.05]">
+            <span className="font-light">{slides[current].title} </span>
+            {slides[current].highlight && (
+              <span className="font-extrabold text-primary">
+                {slides[current].highlight}
+              </span>
+            )}
           </h1>
         </div>
       </div>

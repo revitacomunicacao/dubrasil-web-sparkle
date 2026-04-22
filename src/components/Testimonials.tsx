@@ -62,8 +62,9 @@ const Testimonials = () => {
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-4">
             Depoimentos
           </p>
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-foreground">
-            Experiências dos nossos clientes
+          <h2 className="text-3xl tracking-tight sm:text-4xl md:text-5xl text-foreground leading-[1.05]">
+            <span className="font-light">Experiências dos </span>
+            <span className="font-extrabold text-primary">nossos clientes</span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
             Veja como empresas reais estão transformando suas operações com o apoio do Grupo DuBrasil Soluções.

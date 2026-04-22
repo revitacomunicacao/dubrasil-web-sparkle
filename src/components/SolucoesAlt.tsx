@@ -97,14 +97,17 @@ const SolucoesAlt = () => {
               <Sparkles className="h-4 w-4 text-primary" />O que oferecemos
             </div>
 
-            <h2 className="mt-5 text-3xl md:text-5xl font-bold text-foreground">
-              Um grupo, três frentes de solução.
+            <h2 className="mt-5 text-3xl md:text-5xl font-bold text-foreground tracking-tight">
+              <span className="font-light">Um grupo, </span>
+              <span className="font-extrabold text-primary">três frentes</span>
+              <span className="font-light"> de solução.</span>
             </h2>
 
             <p className="mt-4 text-muted-foreground text-base md:text-lg leading-relaxed">
               Cada frente resolve um ponto crítico da operação com implantação
               personalizada, padronização de processos e acompanhamento
-              consultivo. Esse é o nosso <strong className="text-primary">diferencial</strong>.
+              consultivo. Esse é o nosso{" "}
+              <strong className="font-extrabold text-primary">diferencial</strong>.
             </p>
           </div>
         </div>

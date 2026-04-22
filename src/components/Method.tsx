@@ -49,12 +49,12 @@ const Method = () => {
           <p className="text-[16px] font-semibold uppercase tracking-[0.2em] text-primary mb-4">
             Nosso método
           </p>
-          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-            Como entregamos
+          <h2 className="text-4xl tracking-tight sm:text-5xl md:text-6xl leading-[1.05]">
+            <span className="font-light">Como entregamos</span>
             <br />
-            <span className="text-primary">na prática.</span>
+            <span className="font-extrabold text-primary">na prática.</span>
           </h2>
-          <p className="mt-6 text-[20px] text-white leading-relaxed max-w-xl mx-auto">
+          <p className="mt-6 text-[20px] text-support leading-relaxed max-w-xl mx-auto">
             Três etapas que garantem <strong className="text-primary">resultado real</strong>: da análise inicial ao acompanhamento contínuo. Esse é o <strong className="text-primary">diferencial</strong> que transforma tecnologia em impacto.
           </p>
         </motion.div>
