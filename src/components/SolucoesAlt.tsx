@@ -98,7 +98,7 @@ const SolucoesAlt = () => {
             </div>
 
             <h2 className="mt-5 text-3xl md:text-5xl font-bold text-foreground tracking-tight">
-              <span className="font-light">Um grupo, </span>
+              <span className="font-light">Um grupo com </span>
               <span className="font-extrabold text-primary">três frentes</span>
               <span className="font-light"> de solução.</span>
             </h2>
@@ -189,7 +189,7 @@ const SolucoesAlt = () => {
                     {p.bullets.map((b) => (
                       <div
                         key={b}
-                        className="rounded-2xl bg-muted/50 px-4 py-4 text-sm text-white"
+                        className="rounded-2xl bg-muted/50 px-4 py-4 text-[18px] leading-relaxed text-white"
                       >
                         {b}
                       </div>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { AlertTriangle, Settings, Handshake } from "lucide-react";
 import { useFadeUp } from "@/hooks/useFadeUp";
 import imgParceriaHero from "@/assets/Mais do que tecnologia - parceria real 01.jpg.jpeg";
 import imgParceriaCol1 from "@/assets/Mais do que tecnologia - parceria real 02.jpg.jpeg";
@@ -15,34 +15,13 @@ function cn(...classes: Array<string | false | null | undefined>) {
 const COLUMN_GRADIENT =
   "bg-gradient-to-b from-black/52 via-[#0a2848]/72 to-[#010812]/82";
 
-/** Pesos iguais aos antigos flex-[2.15] / flex-[0.62] — em % a largura anima de forma suave nos browsers. */
-function columnWidthPercent(index: number, hovered: number | null): string {
-  if (hovered === null) return `${100 / 3}%`;
-  const weights = [0.62, 0.62, 0.62];
-  weights[hovered] = 2.15;
-  const sum = weights[0] + weights[1] + weights[2];
-  return `${(weights[index] / sum) * 100}%`;
-}
-
-const COL_EXPAND_MS = 2200;
-const COL_EXPAND_EASING = "cubic-bezier(0.45, 0, 0.25, 1)";
-
 const About = () => {
   const refTop = useFadeUp();
   const refBottom = useFadeUp();
-  const [hoveredCol, setHoveredCol] = useState<number | null>(null);
-  const [desktop, setDesktop] = useState(false);
-
-  useEffect(() => {
-    const mq = window.matchMedia("(min-width: 768px)");
-    const update = () => setDesktop(mq.matches);
-    update();
-    mq.addEventListener("change", update);
-    return () => mq.removeEventListener("change", update);
-  }, []);
 
   const columns = [
     {
+      icon: AlertTriangle,
       body: (
         <>
           Nossa atuação nasceu da necessidade real do mercado: muitas empresas até possuem sistemas, mas continuam enfrentando retrabalho, processos despadronizados e riscos, principalmente quando o assunto envolve jornadas de trabalho, acessos, conformidade e rotina operacional.
@@ -50,6 +29,7 @@ const About = () => {
       ),
     },
     {
+      icon: Settings,
       body: (
         <>
           Por isso, a DuBrasil vai além da ferramenta: ajudamos a desenhar o cenário, configurar da forma correta, treinar as equipes e acompanhar o uso no dia a dia, garantindo resultado prático.
@@ -60,6 +40,7 @@ const About = () => {
       ),
     },
     {
+      icon: Handshake,
       body: (
         <>
           Nosso compromisso é entregar uma experiência de ponta a ponta: diagnóstico, implantação personalizada, treinamento e acompanhamento, sempre com um atendimento humanizado, claro e orientado a solução.
@@ -108,69 +89,35 @@ const About = () => {
       {/* Partes 2–4: três colunas edge-to-edge */}
       <div
         ref={refBottom}
-        className="fade-up flex w-full flex-col md:h-[min(440px,58vh)] md:min-h-0 md:flex-row md:overflow-hidden"
-        onMouseLeave={() => setHoveredCol(null)}
+        className="fade-up flex w-full flex-col md:h-[min(520px,66vh)] md:min-h-0 md:flex-row md:overflow-hidden"
       >
         {columns.map((col, i) => {
-          const isHovered = hoveredCol === i;
-          const widthPct = columnWidthPercent(i, hoveredCol);
+          const Icon = col.icon;
           return (
             <div
               key={i}
               className={cn(
-                "relative isolate flex min-h-[240px] w-full flex-col overflow-hidden border-t border-white/10 md:h-full md:min-h-0 md:max-h-full md:w-auto md:flex-none md:flex-col md:border-t-0 md:border-l md:border-white/10 first:md:border-l-0"
+                "relative isolate flex min-h-[240px] w-full flex-col overflow-hidden border-t border-white/10 md:h-full md:min-h-0 md:max-h-full md:flex-1 md:border-t-0 md:border-l md:border-white/10 first:md:border-l-0"
               )}
-              style={
-                desktop
-                  ? {
-                      width: widthPct,
-                      flexShrink: 0,
-                      flexGrow: 0,
-                      transitionProperty: "width",
-                      transitionDuration: `${COL_EXPAND_MS}ms`,
-                      transitionTimingFunction: COL_EXPAND_EASING,
-                    }
-                  : undefined
-              }
-              onMouseEnter={() => setHoveredCol(i)}
             >
-            <img
-              src={columnImages[i]}
-              alt=""
-              className="absolute inset-0 h-full w-full object-cover"
-              loading="lazy"
-            />
-              <div
-                className={cn(
-                  "absolute inset-0 transition-opacity ease-in-out",
-                  COLUMN_GRADIENT,
-                  isHovered ? "opacity-[0.72]" : "opacity-100"
-                )}
-                style={{
-                  transitionDuration: `${COL_EXPAND_MS}ms`,
-                  transitionTimingFunction: COL_EXPAND_EASING,
-                }}
-                aria-hidden
+              <img
+                src={columnImages[i]}
+                alt=""
+                className="absolute inset-0 h-full w-full object-cover"
+                loading="lazy"
               />
-              <div
-                className={cn(
-                  "absolute inset-0 bg-black transition-opacity ease-in-out",
-                  isHovered ? "opacity-[0.20]" : "opacity-[0.34]"
-                )}
-                style={{
-                  transitionDuration: `${COL_EXPAND_MS}ms`,
-                  transitionTimingFunction: COL_EXPAND_EASING,
-                }}
-                aria-hidden
-              />
-              <div className="relative z-10 flex min-h-[240px] w-full flex-1 flex-col items-center justify-center overflow-hidden px-6 py-8 sm:px-8 md:h-full md:min-h-0 md:flex-1 md:px-5">
-                <div
-                  className={cn(
-                    "flex min-h-0 max-h-full w-full max-w-[min(100%,24rem)] flex-col justify-center overflow-hidden text-center text-base leading-relaxed text-white sm:text-lg md:w-[92%] md:max-w-[26rem] md:flex-1 [text-shadow:0_1px_14px_rgba(0,0,0,0.5),0_1px_2px_rgba(0,0,0,0.65)]",
-                    desktop && hoveredCol !== null && !isHovered && "opacity-80"
-                  )}
-                >
-                  {col.body}
+              <div className={cn("absolute inset-0", COLUMN_GRADIENT)} aria-hidden />
+              <div className="absolute inset-0 bg-black/30" aria-hidden />
+
+              <div className="relative z-10 flex h-full w-full flex-1 flex-col items-center overflow-hidden px-6 pb-10 pt-12 sm:px-8 md:px-8">
+                <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-iconDark">
+                  <Icon className="h-10 w-10 text-white/80" strokeWidth={1.5} />
+                </div>
+
+                <div className="mt-8 flex w-full flex-1 items-center justify-center">
+                  <div className="flex w-full max-w-[min(100%,28rem)] flex-col justify-center text-center text-base leading-relaxed text-white sm:text-lg md:w-[92%] md:max-w-[28rem] [text-shadow:0_1px_14px_rgba(0,0,0,0.5),0_1px_2px_rgba(0,0,0,0.65)]">
+                    {col.body}
+                  </div>
                 </div>
               </div>
             </div>

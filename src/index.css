@@ -72,6 +72,15 @@
     text-wrap: balance;
   }
 
+  /* Enforce minimum readable type size across the UI (do NOT target span; it is used inside headings). */
+  :is(p, a, label, button, input, textarea, li, small, blockquote) {
+    font-size: 20px !important;
+  }
+  /* Header exception: keep navbar typography at 16px */
+  nav :is(a, button) {
+    font-size: 16px !important;
+  }
+
   /* Landing rhythm */
   .section-pad {
     @apply py-20 max-md:py-14 md:py-28;

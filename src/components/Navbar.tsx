@@ -44,7 +44,7 @@ const Navbar = () => {
             <a
               key={link.href}
               href={link.href}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
+              className={`text-[16px] font-medium transition-colors hover:text-primary ${
                 scrolled ? "text-foreground/80" : "text-white/90"
               }`}
             >
@@ -58,7 +58,7 @@ const Navbar = () => {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className={`text-sm font-medium transition-colors hover:text-primary ${
+              className={`text-[16px] font-medium transition-colors hover:text-primary ${
                 scrolled ? "text-foreground/80" : "text-white/90"
               }`}
             >
@@ -85,7 +85,7 @@ const Navbar = () => {
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="block py-3 text-base font-medium text-foreground/80 hover:text-primary"
+              className="block py-3 text-[16px] font-medium text-foreground/80 hover:text-primary"
             >
               {link.label}
             </a>
@@ -98,7 +98,7 @@ const Navbar = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMenuOpen(false)}
-                className="block py-3 text-base font-medium text-foreground/80 hover:text-primary"
+                className="block py-3 text-[16px] font-medium text-foreground/80 hover:text-primary"
               >
                 {link.label}
               </a>
