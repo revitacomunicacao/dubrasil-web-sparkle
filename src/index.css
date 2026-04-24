@@ -80,6 +80,10 @@
   nav :is(a, button) {
     font-size: 16px !important;
   }
+  /* Footer exception: keep footer typography at 16px */
+  footer :is(p, a, span, small) {
+    font-size: 16px !important;
+  }
 
   /* Landing rhythm */
   .section-pad {
