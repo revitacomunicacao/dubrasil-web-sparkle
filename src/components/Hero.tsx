@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { useFadeUp } from "@/hooks/useFadeUp";
-import bgdubrasil from "@/assets/bgdubrasil.jpeg"
+import bgdubrasil from "@/assets/bgDuBrasilSolucoes.jpeg"
 
 const Hero = () => {
   const ref = useFadeUp();
