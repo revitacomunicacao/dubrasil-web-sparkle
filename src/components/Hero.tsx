@@ -10,7 +10,8 @@ const Hero = () => {
     className="relative min-h-screen flex items-center justify-center overflow-hidden text-dark-foreground"
     style={{ backgroundImage: `url(${bgdubrasil})` }}
     >
-       <div className="absolute inset-0 bg-gradient-to-br from-[#002147]/10 via-dark/60 to-primary/20" />
+       <div className="absolute inset-0 bg-black/25" />
+       <div className="absolute inset-0 bg-gradient-to-br from-[#002147]/15 via-dark/70 to-primary/25" />
 
       <div ref={ref} className="fade-up relative z-10 mx-auto max-w-4xl px-6 py-32 text-center">
         <p className="mb-6 text-sm font-medium uppercase tracking-[0.2em] text-primary">
