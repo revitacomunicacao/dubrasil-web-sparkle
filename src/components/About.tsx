@@ -1,11 +1,13 @@
 import { AlertTriangle, Settings, Handshake } from "lucide-react";
 import { useFadeUp } from "@/hooks/useFadeUp";
 import imgParceriaHero from "@/assets/bgMais.jpeg";
+import imgNossa from "@/assets/bgNossa.jpeg";
+import imgVai from "@/assets/bgVai.jpeg";
 import imgParceriaCol1 from "@/assets/Mais do que tecnologia - parceria real 02.jpg.jpeg";
 import imgParceriaCol2 from "@/assets/Mais do que tecnologia - parceria real 03.jpg.jpeg";
 import imgParceriaCol3 from "@/assets/Mais do que tecnologia - parceria real 04.jpg.jpeg";
 
-const columnImages = [imgParceriaCol1, imgParceriaCol2, imgParceriaCol3];
+const columnImages = [imgNossa, imgVai, imgParceriaCol3];
 
 function cn(...classes: Array<string | false | null | undefined>) {
   return classes.filter(Boolean).join(" ");
@@ -106,6 +108,7 @@ const About = () => {
                 className="absolute inset-0 h-full w-full object-cover"
                 loading="lazy"
               />
+              <div className="absolute inset-0 bg-[#29abe2]/15" aria-hidden />
               <div className={cn("absolute inset-0", COLUMN_GRADIENT)} aria-hidden />
               <div className="absolute inset-0 bg-black/30" aria-hidden />
 
@@ -116,6 +119,37 @@ const About = () => {
 
                 <div className="mt-8 flex w-full flex-1 items-center justify-center">
                   <div className="flex w-full max-w-[min(100%,28rem)] flex-col justify-center text-center text-base leading-relaxed text-white sm:text-lg md:w-[92%] md:max-w-[28rem] [text-shadow:0_1px_14px_rgba(0,0,0,0.5),0_1px_2px_rgba(0,0,0,0.65)]">
+                    {col.body}
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Teste duplicado: três colunas sem imagem (cores sólidas) */}
+      <div className="mt-10 flex w-full flex-col md:h-[min(520px,66vh)] md:min-h-0 md:flex-row md:overflow-hidden">
+        {columns.map((col, i) => {
+          const Icon = col.icon;
+          const solidBg = ["#29aae1", "#0f4b94", "#08284e"][i] ?? "#08284e";
+          return (
+            <div
+              key={`solid-${i}`}
+              className={cn(
+                "relative isolate flex min-h-[240px] w-full flex-col overflow-hidden border-t border-white/10 md:h-full md:min-h-0 md:max-h-full md:flex-1 md:border-t-0 md:border-l md:border-white/10 first:md:border-l-0"
+              )}
+              style={{ backgroundColor: solidBg }}
+            >
+              <div className="absolute inset-0 bg-black/10" aria-hidden />
+
+              <div className="relative z-10 flex h-full w-full flex-1 flex-col items-center overflow-hidden px-6 pb-10 pt-12 sm:px-8 md:px-8">
+                <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-iconDark">
+                  <Icon className="h-10 w-10 text-white/80" strokeWidth={1.5} />
+                </div>
+
+                <div className="mt-8 flex w-full flex-1 items-center justify-center">
+                  <div className="flex w-full max-w-[min(100%,28rem)] flex-col justify-center text-center text-base leading-relaxed text-white sm:text-lg md:w-[92%] md:max-w-[28rem]">
                     {col.body}
                   </div>
                 </div>
