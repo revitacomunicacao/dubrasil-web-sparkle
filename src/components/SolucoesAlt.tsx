@@ -96,7 +96,7 @@ const SolucoesAlt = () => {
             O que oferecemos
           </div>
 
-          <h2 className="mt-5 text-3xl md:text-5xl font-bold tracking-tight">
+          <h2 className="mt-5 text-3xl md:text-5xl text-[#08284e] font-bold tracking-tight">
             <span className="font-light">Um grupo com </span>
             <span className="font-extrabold text-primary">três frentes</span>
             <span className="font-light"> de solução.</span>
