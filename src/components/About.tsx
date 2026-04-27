@@ -1,6 +1,6 @@
 import { AlertTriangle, Settings, Handshake } from "lucide-react";
 import { useFadeUp } from "@/hooks/useFadeUp";
-import imgParceriaHero from "@/assets/Mais do que tecnologia - parceria real 01.jpg.jpeg";
+import imgParceriaHero from "@/assets/bgMais.jpeg";
 import imgParceriaCol1 from "@/assets/Mais do que tecnologia - parceria real 02.jpg.jpeg";
 import imgParceriaCol2 from "@/assets/Mais do que tecnologia - parceria real 03.jpg.jpeg";
 import imgParceriaCol3 from "@/assets/Mais do que tecnologia - parceria real 04.jpg.jpeg";
@@ -57,7 +57,7 @@ const About = () => {
       {/* Parte 1: full width, imagem de fundo, conteúdo centralizado */}
       <div
         ref={refTop}
-        className="fade-up relative w-full min-h-[min(600px,78vh)]"
+        className="fade-up relative w-full min-h-[min(600px,78vh)] md:min-h-[850px]"
       >
         <img
           src={imgParceriaHero}
@@ -65,13 +65,13 @@ const About = () => {
           className="absolute inset-0 h-full w-full object-cover"
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-black/40" aria-hidden />
+        <div className="absolute inset-0 bg-black/45" aria-hidden />
         <div
-          className="absolute inset-0 bg-gradient-to-b from-black/38 via-black/44 to-[#002147]/82"
+          className="absolute inset-0 bg-gradient-to-b from-black/42 via-black/48 to-[#002147]/86"
           aria-hidden
         />
 
-        <div className="relative z-10 mx-auto flex min-h-[min(600px,78vh)] max-w-4xl flex-col items-center justify-center px-4 py-16 text-center sm:px-6 sm:py-24 md:py-28 [text-shadow:0_1px_16px_rgba(0,0,0,0.45),0_1px_3px_rgba(0,0,0,0.65)]">
+        <div className="relative z-10 mx-auto flex min-h-[min(600px,78vh)] md:min-h-[850px] max-w-4xl flex-col items-center justify-center px-4 py-16 text-center sm:px-6 sm:py-24 md:py-28 [text-shadow:0_1px_16px_rgba(0,0,0,0.45),0_1px_3px_rgba(0,0,0,0.65)]">
           <p className="mb-4 text-sm font-medium uppercase tracking-[0.15em] text-white/90">
             Sobre o grupo
           </p>
@@ -80,7 +80,7 @@ const About = () => {
             <br />
             <span className="font-extrabold text-primary">parceria real.</span>
           </h2>
-          <p className="text-lg leading-relaxed text-white/95 sm:text-xl">
+          <p className="max-w-2xl text-lg leading-relaxed text-white/95 sm:text-xl">
             O Grupo DuBrasil Soluções é um hub de soluções que une tecnologia, implantação orientada e acompanhamento consultivo para tornar a gestão das empresas mais segura, eficiente e previsível.
           </p>
         </div>

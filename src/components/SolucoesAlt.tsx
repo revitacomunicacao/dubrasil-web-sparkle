@@ -6,9 +6,9 @@ import {
   Headphones,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import fotoSecullum from "@/assets/servicos.jpeg";
-import fotoTga from "@/assets/DuBrasil Sistemas.jpg.jpeg";
-import fotoNexa from "@/assets/DuBrasil Nexa.jpg.jpeg";
+import fotoSecullum from "@/assets/bgServicos.jpeg";
+import fotoTga from "@/assets/bgSistemas.jpeg";
+import fotoNexa from "@/assets/bgNexa.jpeg";
 
 type Produto = {
   title: string;
@@ -86,133 +86,116 @@ const SolucoesAlt = () => {
   return (
     <section
       id="solucoes"
-      className="section-padding bg-background py-24 sm:py-32 relative overflow-hidden"
+      className="relative overflow-hidden bg-background pt-24 sm:pt-32 pb-16"
     >
-
-      <div className="relative container mx-auto">
-        {/* Header */}
-        <div className="mb-14 md:mb-16">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-muted px-4 py-2 text-sm text-muted-foreground">
-              <Sparkles className="h-4 w-4 text-primary" />O que oferecemos
-            </div>
-
-            <h2 className="mt-5 text-3xl md:text-5xl font-bold text-foreground tracking-tight">
-              <span className="font-light">Um grupo com </span>
-              <span className="font-extrabold text-primary">três frentes</span>
-              <span className="font-light"> de solução.</span>
-            </h2>
-
-            <p className="mt-4 text-muted-foreground text-base md:text-lg leading-relaxed">
-              Cada frente resolve um ponto crítico da operação com implantação
-              personalizada, padronização de processos e acompanhamento
-              consultivo. Esse é o nosso{" "}
-              <strong className="font-extrabold text-primary">diferencial</strong>.
-            </p>
+      {/* Header */}
+      <div className="relative mx-auto max-w-7xl px-6 mb-14 md:mb-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-primary px-4 py-2 text-sm text-white/80">
+            <Sparkles className="h-4 w-4 text-white" />
+            O que oferecemos
           </div>
+
+          <h2 className="mt-5 text-3xl md:text-5xl font-bold tracking-tight">
+            <span className="font-light">Um grupo com </span>
+            <span className="font-extrabold text-primary">três frentes</span>
+            <span className="font-light"> de solução.</span>
+          </h2>
+
+          <p className="mt-4 text-support text-base md:text-lg leading-relaxed">
+            Cada frente resolve um ponto crítico da operação com implantação
+            personalizada, padronização de processos e acompanhamento consultivo.
+            Esse é o nosso{" "}
+            <strong className="font-extrabold text-primary">diferencial</strong>.
+          </p>
         </div>
+      </div>
 
-        {/* Cards alternados */}
-        <div className="flex flex-col gap-10">
-          {produtos.map((p, i) => {
-            const Icon = p.icon;
-            const invert = i % 2 === 1;
+      {/* Faixas full-width (sem card) */}
+      <div className="w-full space-y-10">
+        {produtos.map((p, i) => {
+          const Icon = p.icon;
+          const invert = i % 2 === 1;
 
-            return (
-              <motion.article
-                key={p.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08, duration: 0.55 }}
-                className={cn(
-                  "group relative overflow-hidden rounded-3xl border border-border",
-                  "bg-gradient-to-br from-[#071322] to-[#002147]",
-                  "grid gap-0 md:grid-cols-12"
-                )}
-              >
-                {/* Image side */}
+          return (
+            <motion.article
+              key={p.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.08, duration: 0.55 }}
+              className="w-full bg-[#00234D]"
+            >
+              <div className={cn("grid w-full md:grid-cols-12", "min-h-[420px]")}>
+                {/* Image column (only image) */}
                 <div
                   className={cn(
                     "relative md:col-span-4",
                     invert ? "md:order-2" : "md:order-1"
                   )}
                 >
-                  <div className="relative h-[260px] md:h-full md:min-h-[360px] overflow-hidden">
+                  <div className="relative h-[300px] md:h-full overflow-hidden">
                     <img
                       src={p.image}
                       alt={p.title}
-                      className="absolute inset-0 h-full w-full object-contain"
+                      className="absolute inset-0 h-full w-full object-cover"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent" />
-
-                    {/* Title overlay (mobile) */}
-                    <div className="absolute bottom-5 left-6 right-6 md:hidden">
-                      <h3 className="text-xl font-bold text-foreground">
-                        {p.title}
-                      </h3>
-                      <p className="mt-1 text-sm text-primary font-medium">
-                        {p.subtitle}
-                      </p>
-                    </div>
                   </div>
                 </div>
 
-                {/* Content side */}
+                {/* Text column (centered) */}
                 <div
                   className={cn(
-                    "p-8 md:p-12 md:col-span-8",
+                    "md:col-span-8",
                     invert ? "md:order-1" : "md:order-2"
                   )}
                 >
-                  <div className="flex items-start gap-4">
-                    <div className="rounded-2xl border border-border bg-primary/10 p-3">
-                      <Icon className="h-5 w-5 text-primary" />
-                    </div>
+                  <div className="flex h-full items-center justify-center px-6 py-12 md:px-12">
+                    <div className="w-full max-w-3xl text-center">
+                      <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-iconDark">
+                        <Icon className="h-10 w-10 text-white/80" strokeWidth={1.5} />
+                      </div>
 
-                    <div className="flex-1">
-                      <h3 className="hidden md:block text-2xl md:text-3xl font-bold text-white">
+                      <h3 className="text-2xl md:text-3xl font-bold text-white tracking-tight">
                         {p.title}
                       </h3>
-                      <p className="hidden md:block mt-1 text-sm font-medium text-primary">
+                      <p className="mt-2 text-primary font-semibold">
                         {p.subtitle}
                       </p>
-                      <p className="mt-0 md:mt-3 text-muted-foreground leading-relaxed">
+                      <p className="mt-5 text-support leading-relaxed">
                         {p.description}
                       </p>
+
+                      <div className="mt-8 grid gap-3 sm:grid-cols-3">
+                        {p.bullets.map((b) => (
+                          <div
+                            key={b}
+                            className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm px-4 py-4 text-[18px] leading-relaxed text-white"
+                          >
+                            {b}
+                          </div>
+                        ))}
+                      </div>
+
+                      <div className="mt-10">
+                        <a
+                          href={p.ctaLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3 font-semibold text-primary-foreground transition-all hover:brightness-110 hover:scale-105"
+                        >
+                          <ArrowRight size={16} />
+                          {p.ctaLabel}
+                        </a>
+                      </div>
                     </div>
                   </div>
-
-                  {/* Bullets */}
-                  <div className="mt-6 grid gap-3 sm:grid-cols-3">
-                    {p.bullets.map((b) => (
-                      <div
-                        key={b}
-                        className="rounded-2xl bg-muted/50 px-4 py-4 text-[18px] leading-relaxed text-white"
-                      >
-                        {b}
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* CTA */}
-                  <div className="mt-8">
-                    <a
-                      href={p.ctaLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:brightness-110 hover:scale-105"
-                    >
-                      <ArrowRight size={16} />
-                      {p.ctaLabel}
-                    </a>
-                  </div>
                 </div>
-              </motion.article>
-            );
-          })}
-        </div>
+              </div>
+            </motion.article>
+          );
+        })}
       </div>
     </section>
   );

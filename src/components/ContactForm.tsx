@@ -111,7 +111,7 @@ const ContactForm = () => {
                       id="name"
                       placeholder="Seu nome"
                       {...register("name")}
-                      className={`bg-white/10 border-white/20 text-white placeholder:text-white/40 ${
+                      className={`bg-white/10 border-white/20 text-white placeholder:text-[16px] placeholder:text-white/40 ${
                         errors.name ? "border-destructive" : ""
                       }`}
                     />
@@ -134,7 +134,7 @@ const ContactForm = () => {
                       type="email"
                       placeholder="seu@email.com"
                       {...register("email")}
-                      className={`bg-white/10 border-white/20 text-white placeholder:text-white/40 ${
+                      className={`bg-white/10 border-white/20 text-white placeholder:text-[16px] placeholder:text-white/40 ${
                         errors.email ? "border-destructive" : ""
                       }`}
                     />
@@ -156,7 +156,7 @@ const ContactForm = () => {
                       id="phone"
                       placeholder="(11) 99999-9999"
                       {...register("phone")}
-                      className={`bg-white/10 border-white/20 text-white placeholder:text-white/40 ${
+                      className={`bg-white/10 border-white/20 text-white placeholder:text-[16px] placeholder:text-white/40 ${
                         errors.phone ? "border-destructive" : ""
                       }`}
                     />
@@ -179,7 +179,7 @@ const ContactForm = () => {
                       placeholder="Conte-nos sobre seu negócio e como podemos ajudar..."
                       rows={4}
                       {...register("message")}
-                      className={`bg-white/10 border-white/20 text-white placeholder:text-white/40 ${
+                      className={`bg-white/10 border-white/20 text-white placeholder:text-[16px] placeholder:text-white/40 ${
                         errors.message ? "border-destructive" : ""
                       }`}
                     />
