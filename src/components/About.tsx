@@ -3,11 +3,12 @@ import { useFadeUp } from "@/hooks/useFadeUp";
 import imgParceriaHero from "@/assets/bgMais.jpeg";
 import imgNossa from "@/assets/bgNossa.jpeg";
 import imgVai from "@/assets/bgVai.jpeg";
+import imgNosso from "@/assets/bgNosso.jpeg";
 import imgParceriaCol1 from "@/assets/Mais do que tecnologia - parceria real 02.jpg.jpeg";
 import imgParceriaCol2 from "@/assets/Mais do que tecnologia - parceria real 03.jpg.jpeg";
 import imgParceriaCol3 from "@/assets/Mais do que tecnologia - parceria real 04.jpg.jpeg";
 
-const columnImages = [imgNossa, imgVai, imgParceriaCol3];
+const columnImages = [imgNossa, imgVai, imgNosso];
 
 function cn(...classes: Array<string | false | null | undefined>) {
   return classes.filter(Boolean).join(" ");
@@ -94,7 +95,6 @@ const About = () => {
         className="fade-up flex w-full flex-col md:h-[min(520px,66vh)] md:min-h-0 md:flex-row md:overflow-hidden"
       >
         {columns.map((col, i) => {
-          const Icon = col.icon;
           return (
             <div
               key={i}
@@ -108,16 +108,14 @@ const About = () => {
                 className="absolute inset-0 h-full w-full object-cover"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-[#29abe2]/15" aria-hidden />
-              <div className={cn("absolute inset-0", COLUMN_GRADIENT)} aria-hidden />
-              <div className="absolute inset-0 bg-black/30" aria-hidden />
+              <div className="absolute inset-0 bg-black/45" aria-hidden />
+              <div
+                className="absolute inset-0 bg-gradient-to-br from-[#08284e]/25 via-dark/85 to-primary/35"
+                aria-hidden
+              />
 
-              <div className="relative z-10 flex h-full w-full flex-1 flex-col items-center overflow-hidden px-6 pb-10 pt-12 sm:px-8 md:px-8">
-                <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-iconDark">
-                  <Icon className="h-10 w-10 text-white/80" strokeWidth={1.5} />
-                </div>
-
-                <div className="mt-8 flex w-full flex-1 items-center justify-center">
+              <div className="relative z-10 flex h-full w-full flex-1 flex-col items-center justify-center overflow-hidden px-6 py-10 sm:px-8 md:px-8">
+                <div className="flex w-full flex-1 items-center justify-center">
                   <div className="flex w-full max-w-[min(100%,28rem)] flex-col justify-center text-center text-base leading-relaxed text-white sm:text-lg md:w-[92%] md:max-w-[28rem] [text-shadow:0_1px_14px_rgba(0,0,0,0.5),0_1px_2px_rgba(0,0,0,0.65)]">
                     {col.body}
                   </div>
