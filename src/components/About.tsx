@@ -4,7 +4,6 @@ import imgParceriaHero from "@/assets/bgMais.jpeg";
 import imgNossa from "@/assets/bgNossa.jpeg";
 import imgVai from "@/assets/bgVai.jpeg";
 import imgNosso from "@/assets/bgNosso.jpeg";
-import blocosSolucoes from "@/assets/blocosolucoes.jpeg";
 import imgParceriaCol1 from "@/assets/Mais do que tecnologia - parceria real 02.jpg.jpeg";
 import imgParceriaCol2 from "@/assets/Mais do que tecnologia - parceria real 03.jpg.jpeg";
 import imgParceriaCol3 from "@/assets/Mais do que tecnologia - parceria real 04.jpg.jpeg";
@@ -156,16 +155,6 @@ const About = () => {
             </div>
           );
         })}
-      </div>
-
-      {/* Terceira opção (simulação): imagem full-width */}
-      <div className="bg-white mt-10 w-full bg-white flex justify-center items-center">
-        <img
-          src={blocosSolucoes}
-          alt="Blocos de soluções"
-          className="w-[80%] h-auto"
-          loading="lazy"
-        />
       </div>
     </section>
   );
