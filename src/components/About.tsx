@@ -57,45 +57,52 @@ const About = () => {
 
   return (
     <section id="sobre" className="w-full overflow-hidden bg-[#002147] text-white">
-      {/* Parte 1: full width, imagem de fundo, conteúdo centralizado */}
-      <div
-        ref={refTop}
-        className="fade-up relative w-full min-h-[min(600px,78vh)] md:min-h-[850px]"
-      >
-        <img
-          src={imgParceriaHero}
-          alt=""
-          className="absolute inset-0 h-full w-full object-cover"
-          loading="lazy"
-        />
-        <div className="absolute inset-0 bg-black/45" aria-hidden />
-        <div
-          className="absolute inset-0 bg-gradient-to-b from-black/42 via-black/48 to-[#002147]/86"
-          aria-hidden
-        />
+      {/* Parte 1: duas colunas (imagem à esquerda, texto à direita) */}
+      <div ref={refTop} className="fade-up relative w-full">
+        <div className="grid w-full md:grid-cols-12 min-h-[700px] md:h-[500px]">
+          {/* Imagem (esquerda) */}
+          <div className="relative overflow-hidden md:col-span-7">
+            <div className="relative h-[360px] sm:h-[460px] md:h-full">
+              <img
+                src={imgParceriaHero}
+                alt=""
+                className="absolute inset-0 h-full w-full object-cover opacity-70"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-black/35" aria-hidden />
+              <div
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-[#002147]/45 to-[#002147]"
+                aria-hidden
+              />
+            </div>
+          </div>
 
-        <div className="relative z-10 mx-auto flex min-h-[min(600px,78vh)] md:min-h-[850px] max-w-4xl flex-col items-center justify-center px-4 py-16 text-center sm:px-6 sm:py-24 md:py-28 [text-shadow:0_1px_16px_rgba(0,0,0,0.45),0_1px_3px_rgba(0,0,0,0.65)]">
-          <p className="mb-4 text-sm font-medium uppercase tracking-[0.15em] text-white/90">
-            Sobre o grupo
-          </p>
-          <h2 className="mb-6 text-3xl leading-tight tracking-tight sm:text-4xl md:text-5xl">
-            <span className="font-light">Mais do que tecnologia:</span>
-            <br />
-            <span className="font-extrabold text-primary">parceria real.</span>
-          </h2>
-          <p className="max-w-2xl text-lg leading-relaxed text-white/95 sm:text-xl">
-            O Grupo DuBrasil Soluções é um hub de soluções que une tecnologia, implantação orientada e acompanhamento consultivo para tornar a gestão das empresas mais segura, eficiente e previsível.
-          </p>
+          {/* Texto (direita) */}
+          <div className="md:col-span-5 flex flex-col justify-center py-16 sm:py-24 md:py-28 px-6 sm:px-8 md:px-10">
+            <p className="mb-4 text-sm font-medium uppercase tracking-[0.15em] text-white/90">
+              Sobre o grupo
+            </p>
+            <h2 className="mb-6 text-3xl leading-tight tracking-tight sm:text-4xl md:text-5xl">
+              <span className="font-light">Mais do que tecnologia:</span>
+              <br />
+              <span className="font-extrabold text-primary">parceria real.</span>
+            </h2>
+            <p className="text-lg leading-relaxed text-white/95 sm:text-xl">
+              O Grupo DuBrasil Soluções é um hub de soluções que une tecnologia,
+              implantação orientada e acompanhamento consultivo para tornar a
+              gestão das empresas mais segura, eficiente e previsível.
+            </p>
+          </div>
         </div>
       </div>
 
-      {/* Partes 2–4: três colunas edge-to-edge */}
-      <div
-        ref={refBottom}
-        className="fade-up flex w-full flex-col md:h-[min(520px,66vh)] md:min-h-0 md:flex-row md:overflow-hidden"
-      >
-        {columns.map((col, i) => {
-          return (
+      {/* Partes 2–4 (opção com imagem): oculto por enquanto */}
+      <div className="hidden">
+        <div
+          ref={refBottom}
+          className="fade-up flex w-full flex-col md:h-[min(520px,66vh)] md:min-h-0 md:flex-row md:overflow-hidden"
+        >
+          {columns.map((col, i) => (
             <div
               key={i}
               className={cn(
@@ -122,12 +129,12 @@ const About = () => {
                 </div>
               </div>
             </div>
-          );
-        })}
+          ))}
+        </div>
       </div>
 
       {/* Teste duplicado: três colunas sem imagem (cores sólidas) */}
-      <div className="mt-10 flex w-full flex-col md:h-[min(520px,66vh)] md:min-h-0 md:flex-row md:overflow-hidden">
+      <div className="flex w-full flex-col md:h-[min(520px,66vh)] md:min-h-0 md:flex-row md:overflow-hidden">
         {columns.map((col, i) => {
           const Icon = col.icon;
           const solidBg = ["#29aae1", "#0f4b94", "#08284e"][i] ?? "#08284e";
