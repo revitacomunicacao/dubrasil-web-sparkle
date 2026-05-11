@@ -39,7 +39,7 @@ const produtos: Produto[] = [
     ],
     ctaLabel: "Saiba mais",
     ctaLink: "https://revitacomunicacao.com.br/projetos/dubrasil/",
-    textSide: "left",
+    textSide: "right",
   },
   {
     tag: "ERP & Processos",
