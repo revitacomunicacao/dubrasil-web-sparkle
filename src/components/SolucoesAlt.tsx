@@ -136,21 +136,6 @@ const SolucoesAlt = () => {
                 style={{ backgroundImage: `url(${p.image})` }}
                 aria-hidden="true"
               />
-              {/* Soft overlay for legibility on the text side */}
-              <div
-                className={cn(
-                  "absolute inset-0 hidden md:block",
-                  isLeft
-                    ? "bg-gradient-to-r from-white via-white/85 to-transparent"
-                    : "bg-gradient-to-l from-white via-white/85 to-transparent"
-                )}
-                aria-hidden="true"
-              />
-              {/* Mobile overlay (full white wash for legibility) */}
-              <div
-                className="absolute inset-0 bg-white/85 md:hidden"
-                aria-hidden="true"
-              />
 
               <div className="relative mx-auto max-w-7xl px-6 py-16 md:py-24 min-h-[480px] md:min-h-[560px]">
                 <div
