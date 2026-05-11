@@ -25,23 +25,6 @@ type Produto = {
 
 const produtos: Produto[] = [
   {
-    tag: "Jornadas & Acessos",
-    title: "DuBrasil Serviços",
-    subtitle: "Ponto, Jornadas e Acessos com Segurança Jurídica",
-    description:
-      "Rastreabilidade, padronização e conformidade trabalhista para reduzir riscos, ajustes manuais e retrabalho.",
-    image: bgServicos,
-    icon: Clock,
-    bullets: [
-      "Gestão de jornadas",
-      "Controle de acesso",
-      "Conformidade trabalhista",
-    ],
-    ctaLabel: "Saiba mais",
-    ctaLink: "https://revitacomunicacao.com.br/projetos/dubrasil/",
-    textSide: "left",
-  },
-  {
     tag: "ERP & Processos",
     title: "DuBrasil Sistemas",
     subtitle: "ERP e gestão de processos para operação organizada",
@@ -57,6 +40,23 @@ const produtos: Produto[] = [
     ctaLabel: "Saiba mais",
     ctaLink: "https://revitacomunicacao.com.br/projetos/tga/",
     textSide: "right",
+  },
+  {
+    tag: "Jornadas & Acessos",
+    title: "DuBrasil Serviços",
+    subtitle: "Ponto, Jornadas e Acessos com Segurança Jurídica",
+    description:
+      "Rastreabilidade, padronização e conformidade trabalhista para reduzir riscos, ajustes manuais e retrabalho.",
+    image: bgServicos,
+    icon: Clock,
+    bullets: [
+      "Gestão de jornadas",
+      "Controle de acesso",
+      "Conformidade trabalhista",
+    ],
+    ctaLabel: "Saiba mais",
+    ctaLink: "https://revitacomunicacao.com.br/projetos/dubrasil/",
+    textSide: "left",
   },
   {
     tag: "Atendimento Multicanal",
@@ -134,21 +134,6 @@ const SolucoesAlt = () => {
               <div
                 className="absolute inset-0 bg-no-repeat bg-cover bg-center"
                 style={{ backgroundImage: `url(${p.image})` }}
-                aria-hidden="true"
-              />
-              {/* Soft overlay for legibility on the text side */}
-              <div
-                className={cn(
-                  "absolute inset-0 hidden md:block",
-                  isLeft
-                    ? "bg-gradient-to-r from-white via-white/85 to-transparent"
-                    : "bg-gradient-to-l from-white via-white/85 to-transparent"
-                )}
-                aria-hidden="true"
-              />
-              {/* Mobile overlay (full white wash for legibility) */}
-              <div
-                className="absolute inset-0 bg-white/85 md:hidden"
                 aria-hidden="true"
               />
 
