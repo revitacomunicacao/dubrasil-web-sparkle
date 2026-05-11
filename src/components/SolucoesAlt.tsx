@@ -25,23 +25,6 @@ type Produto = {
 
 const produtos: Produto[] = [
   {
-    tag: "Jornadas & Acessos",
-    title: "DuBrasil Serviços",
-    subtitle: "Ponto, Jornadas e Acessos com Segurança Jurídica",
-    description:
-      "Rastreabilidade, padronização e conformidade trabalhista para reduzir riscos, ajustes manuais e retrabalho.",
-    image: bgServicos,
-    icon: Clock,
-    bullets: [
-      "Gestão de jornadas",
-      "Controle de acesso",
-      "Conformidade trabalhista",
-    ],
-    ctaLabel: "Saiba mais",
-    ctaLink: "https://revitacomunicacao.com.br/projetos/dubrasil/",
-    textSide: "right",
-  },
-  {
     tag: "ERP & Processos",
     title: "DuBrasil Sistemas",
     subtitle: "ERP e gestão de processos para operação organizada",
@@ -57,6 +40,23 @@ const produtos: Produto[] = [
     ctaLabel: "Saiba mais",
     ctaLink: "https://revitacomunicacao.com.br/projetos/tga/",
     textSide: "right",
+  },
+  {
+    tag: "Jornadas & Acessos",
+    title: "DuBrasil Serviços",
+    subtitle: "Ponto, Jornadas e Acessos com Segurança Jurídica",
+    description:
+      "Rastreabilidade, padronização e conformidade trabalhista para reduzir riscos, ajustes manuais e retrabalho.",
+    image: bgServicos,
+    icon: Clock,
+    bullets: [
+      "Gestão de jornadas",
+      "Controle de acesso",
+      "Conformidade trabalhista",
+    ],
+    ctaLabel: "Saiba mais",
+    ctaLink: "https://revitacomunicacao.com.br/projetos/dubrasil/",
+    textSide: "left",
   },
   {
     tag: "Atendimento Multicanal",
