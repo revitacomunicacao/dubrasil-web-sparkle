@@ -6,9 +6,9 @@ import {
   Headphones,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import fotoSecullum from "@/assets/bgServicos.jpeg";
-import fotoTga from "@/assets/bgSistemas.jpeg";
-import fotoNexa from "@/assets/bgNexa.jpeg";
+import bgServicos from "@/assets/bloco-servicos.webp";
+import bgSistemas from "@/assets/bloco-sistemas.webp";
+import bgNexa from "@/assets/bloco-nexa.webp";
 
 type Produto = {
   title: string;
@@ -20,6 +20,7 @@ type Produto = {
   bullets: string[];
   ctaLabel: string;
   ctaLink: string;
+  textSide: "left" | "right";
 };
 
 const produtos: Produto[] = [
@@ -29,7 +30,7 @@ const produtos: Produto[] = [
     subtitle: "Ponto, Jornadas e Acessos com Segurança Jurídica",
     description:
       "Rastreabilidade, padronização e conformidade trabalhista para reduzir riscos, ajustes manuais e retrabalho.",
-    image: fotoSecullum,
+    image: bgServicos,
     icon: Clock,
     bullets: [
       "Gestão de jornadas",
@@ -38,6 +39,7 @@ const produtos: Produto[] = [
     ],
     ctaLabel: "Saiba mais",
     ctaLink: "https://revitacomunicacao.com.br/projetos/dubrasil/",
+    textSide: "left",
   },
   {
     tag: "ERP & Processos",
@@ -45,7 +47,7 @@ const produtos: Produto[] = [
     subtitle: "ERP e gestão de processos para operação organizada",
     description:
       "Mais controle sobre rotinas, financeiro e fluxo de trabalho para decisões mais seguras e uma gestão previsível.",
-    image: fotoTga,
+    image: bgSistemas,
     icon: Server,
     bullets: [
       "Controle financeiro",
@@ -54,6 +56,7 @@ const produtos: Produto[] = [
     ],
     ctaLabel: "Saiba mais",
     ctaLink: "https://revitacomunicacao.com.br/projetos/tga/",
+    textSide: "right",
   },
   {
     tag: "Atendimento Multicanal",
@@ -66,7 +69,7 @@ const produtos: Produto[] = [
         encante em cada atendimento.
       </>
     ),
-    image: fotoNexa,
+    image: bgNexa,
     icon: Headphones,
     bullets: [
       "Centralização de canais",
@@ -75,6 +78,7 @@ const produtos: Produto[] = [
     ],
     ctaLabel: "Saiba mais",
     ctaLink: "https://revitacomunicacao.com.br/nexa/",
+    textSide: "right",
   },
 ];
 
@@ -111,11 +115,11 @@ const SolucoesAlt = () => {
         </div>
       </div>
 
-      {/* Faixas full-width (sem card) */}
-      <div className="w-full space-y-10">
+      {/* Faixas full-width com background image */}
+      <div className="w-full space-y-6 md:space-y-10">
         {produtos.map((p, i) => {
           const Icon = p.icon;
-          const invert = i % 2 === 1;
+          const isLeft = p.textSide === "left";
 
           return (
             <motion.article
@@ -124,71 +128,78 @@ const SolucoesAlt = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.55 }}
-              className="w-full bg-[#00234D]"
+              className="relative w-full overflow-hidden bg-[#f3f4f6]"
             >
-              <div className={cn("grid w-full md:grid-cols-12", "min-h-[420px]")}>
-                {/* Image column (only image) */}
+              {/* Background illustration */}
+              <div
+                className="absolute inset-0 bg-no-repeat bg-cover bg-center"
+                style={{ backgroundImage: `url(${p.image})` }}
+                aria-hidden="true"
+              />
+              {/* Soft overlay for legibility on the text side */}
+              <div
+                className={cn(
+                  "absolute inset-0 hidden md:block",
+                  isLeft
+                    ? "bg-gradient-to-r from-white via-white/85 to-transparent"
+                    : "bg-gradient-to-l from-white via-white/85 to-transparent"
+                )}
+                aria-hidden="true"
+              />
+              {/* Mobile overlay (full white wash for legibility) */}
+              <div
+                className="absolute inset-0 bg-white/85 md:hidden"
+                aria-hidden="true"
+              />
+
+              <div className="relative mx-auto max-w-7xl px-6 py-16 md:py-24 min-h-[480px] md:min-h-[560px]">
                 <div
                   className={cn(
-                    "relative md:col-span-4",
-                    invert ? "md:order-2" : "md:order-1"
+                    "grid md:grid-cols-2 items-center",
+                    isLeft ? "" : ""
                   )}
                 >
-                  <div className="relative h-[300px] md:h-full overflow-hidden">
-                    <img
-                      src={p.image}
-                      alt={p.title}
-                      className="absolute inset-0 h-full w-full object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
+                  <div
+                    className={cn(
+                      "max-w-xl",
+                      isLeft ? "md:col-start-1" : "md:col-start-2"
+                    )}
+                  >
+                    <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10">
+                      <Icon className="h-7 w-7 text-primary" strokeWidth={1.75} />
+                    </div>
 
-                {/* Text column (centered) */}
-                <div
-                  className={cn(
-                    "md:col-span-8",
-                    invert ? "md:order-1" : "md:order-2"
-                  )}
-                >
-                  <div className="flex h-full items-center justify-center px-6 py-12 md:px-12">
-                    <div className="w-full max-w-3xl text-center">
-                      <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-iconDark">
-                        <Icon className="h-10 w-10 text-white/80" strokeWidth={1.5} />
-                      </div>
+                    <h3 className="text-3xl md:text-4xl font-bold tracking-tight text-[#08284e]">
+                      {p.title}
+                    </h3>
+                    <p className="mt-2 text-primary font-semibold">
+                      {p.subtitle}
+                    </p>
+                    <p className="mt-5 text-base md:text-lg leading-relaxed text-[#08284e]/70">
+                      {p.description}
+                    </p>
 
-                      <h3 className="text-2xl md:text-3xl font-bold text-white tracking-tight">
-                        {p.title}
-                      </h3>
-                      <p className="mt-2 text-primary font-semibold">
-                        {p.subtitle}
-                      </p>
-                      <p className="mt-5 text-support leading-relaxed">
-                        {p.description}
-                      </p>
-
-                      <div className="mt-8 grid gap-3 sm:grid-cols-3">
-                        {p.bullets.map((b) => (
-                          <div
-                            key={b}
-                            className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm px-4 py-4 text-[18px] leading-relaxed text-white"
-                          >
-                            {b}
-                          </div>
-                        ))}
-                      </div>
-
-                      <div className="mt-10">
-                        <a
-                          href={p.ctaLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3 font-semibold text-primary-foreground transition-all hover:brightness-110 hover:scale-105"
+                    <div className="mt-8 flex flex-wrap gap-3">
+                      {p.bullets.map((b) => (
+                        <div
+                          key={b}
+                          className="rounded-full border border-[#08284e]/10 bg-white/70 backdrop-blur-sm px-4 py-2 text-sm font-medium text-[#08284e]"
                         >
-                          <ArrowRight size={16} />
-                          {p.ctaLabel}
-                        </a>
-                      </div>
+                          {b}
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="mt-10">
+                      <a
+                        href={p.ctaLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3 font-semibold text-primary-foreground transition-all hover:brightness-110 hover:scale-105"
+                      >
+                        {p.ctaLabel}
+                        <ArrowRight size={16} />
+                      </a>
                     </div>
                   </div>
                 </div>
