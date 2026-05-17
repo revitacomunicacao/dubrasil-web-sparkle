@@ -62,11 +62,19 @@ const ContactForm = () => {
   return (
     <section
       id="contato"
-      className="relative flex min-h-[850px] flex-col overflow-hidden py-24 max-md:py-16"
+      className="relative flex min-h-[850px] flex-col overflow-hidden py-24 max-md:min-h-0 max-md:py-12 max-lg:min-h-[720px] max-lg:py-16"
     >
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 hidden bg-cover bg-center bg-no-repeat md:block"
         style={{ backgroundImage: `url(${bgMeshAlt})` }}
+        aria-hidden
+      />
+      <div
+        className="absolute inset-0 bg-cover bg-no-repeat md:hidden"
+        style={{
+          backgroundImage: `url(${bgMeshAlt})`,
+          backgroundPosition: "center 20%",
+        }}
       />
       <div
         className="absolute inset-0"
@@ -76,19 +84,23 @@ const ContactForm = () => {
         }}
         aria-hidden="true"
       />
+      <div
+        className="absolute inset-0 bg-black/20 md:hidden"
+        aria-hidden="true"
+      />
 
       <div className="relative z-10 flex w-full flex-1 flex-col justify-center">
-        <div className="container mx-auto px-4">
-          <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
+        <div className="container mx-auto px-4 max-md:px-4">
+          <div className="grid items-center gap-8 max-md:gap-6 lg:grid-cols-12 lg:gap-12">
             {/* Textos */}
             <div className="lg:col-span-6 flex flex-col items-center justify-center lg:items-start">
               <div className="w-full max-w-2xl text-left">
-                <h2 className="mt-2 text-4xl leading-[1.05] tracking-tight text-white max-md:text-balance md:text-5xl lg:text-6xl">
+                <h2 className="mt-2 text-3xl leading-[1.05] tracking-tight text-white max-md:text-balance sm:text-4xl md:text-5xl lg:text-6xl">
                   <span className="font-light">Pronto para </span>
                   <span className="block font-extrabold">transformar</span>
                   <span className="font-light">seu atendimento?</span>
                 </h2>
-                <h3 className="mt-20 text-4xl leading-[1.05] tracking-tight text-white max-md:text-balance md:text-5xl lg:text-6xl">
+                <h3 className="mt-10 text-3xl leading-[1.05] tracking-tight text-white max-md:mt-8 max-md:text-balance sm:mt-14 sm:text-4xl md:mt-20 md:text-5xl lg:text-6xl">
                   <span className="block font-light">Vamos</span>
                   <span className="block font-extrabold">construir</span>
                   <span className="block font-light">essa história?</span>

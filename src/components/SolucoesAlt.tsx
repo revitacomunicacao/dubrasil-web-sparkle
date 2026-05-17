@@ -21,6 +21,8 @@ type Produto = {
   ctaLabel: string;
   ctaLink: string;
   textSide: "left" | "right";
+  /** Alinhamento do fundo em telas < md */
+  mobileBgPosition: string;
 };
 
 const produtos: Produto[] = [
@@ -40,6 +42,7 @@ const produtos: Produto[] = [
     ctaLabel: "Saiba mais",
     ctaLink: "https://revitacomunicacao.com.br/projetos/tga/",
     textSide: "right",
+    mobileBgPosition: "left center",
   },
   {
     tag: "Jornadas & Acessos",
@@ -57,6 +60,7 @@ const produtos: Produto[] = [
     ctaLabel: "Saiba mais",
     ctaLink: "https://revitacomunicacao.com.br/projetos/dubrasil/",
     textSide: "left",
+    mobileBgPosition: "right center",
   },
   {
     tag: "Atendimento Multicanal",
@@ -79,6 +83,7 @@ const produtos: Produto[] = [
     ctaLabel: "Saiba mais",
     ctaLink: "https://revitacomunicacao.com.br/nexa/",
     textSide: "right",
+    mobileBgPosition: "left center",
   },
 ];
 
@@ -90,17 +95,17 @@ const SolucoesAlt = () => {
   return (
     <section
       id="solucoes"
-      className="relative overflow-hidden bg-background pt-24 sm:pt-32 pb-16"
+      className="relative overflow-hidden bg-background pb-16 pt-16 max-md:pt-14 max-md:pb-10 sm:pt-32 md:pt-24"
     >
       {/* Header */}
-      <div className="relative mx-auto max-w-7xl px-6 mb-14 md:mb-16">
-        <div className="max-w-4xl mx-auto text-center">
+      <div className="relative mx-auto mb-10 max-w-7xl px-4 max-md:mb-8 sm:px-6 md:mb-16">
+        <div className="mx-auto max-w-4xl text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-primary px-4 py-2 text-sm text-white/80">
             <Sparkles className="h-4 w-4 text-white" />
             O que oferecemos
           </div>
 
-          <h2 className="mt-5 text-3xl md:text-5xl text-[#08284e] font-bold tracking-tight">
+          <h2 className="mt-5 text-2xl font-bold tracking-tight text-[#08284e] max-md:text-balance sm:text-3xl md:text-5xl">
             <span className="font-light">Um grupo com </span>
             <span className="font-extrabold text-primary">três frentes</span>
             <span className="font-light"> de solução.</span>
@@ -128,16 +133,30 @@ const SolucoesAlt = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.55 }}
-              className="relative w-full overflow-hidden bg-[#f3f4f6]"
+              className="relative isolate w-full overflow-hidden bg-[#f3f4f6]"
             >
-              {/* Background illustration */}
+              {/* Ilustração de fundo — desktop */}
               <div
-                className="absolute inset-0 bg-no-repeat bg-cover bg-center"
+                className="absolute inset-0 z-0 hidden bg-cover bg-center bg-no-repeat md:block"
                 style={{ backgroundImage: `url(${p.image})` }}
                 aria-hidden="true"
               />
+              {/* Ilustração de fundo — mobile/tablet (atrás dos textos) */}
+              <div
+                className="absolute inset-0 z-0 bg-cover bg-no-repeat md:hidden"
+                style={{
+                  backgroundImage: `url(${p.image})`,
+                  backgroundPosition: p.mobileBgPosition,
+                }}
+                aria-hidden="true"
+              />
+              {/* Fundo sólido sobre a ilustração — somente celular */}
+              <div
+                className="pointer-events-none absolute inset-0 z-[1] bg-[#002147]/85 md:hidden"
+                aria-hidden="true"
+              />
 
-              <div className="relative mx-auto max-w-7xl px-6 py-16 md:py-24 min-h-[480px] md:min-h-[560px]">
+              <div className="relative z-10 mx-auto min-h-[400px] max-w-7xl px-4 py-12 max-md:min-h-[380px] sm:px-6 md:min-h-[560px] md:px-6 md:py-24">
                 <div
                   className={cn(
                     "grid md:grid-cols-2 items-center",
@@ -150,37 +169,37 @@ const SolucoesAlt = () => {
                       isLeft ? "md:col-start-1" : "md:col-start-2"
                     )}
                   >
-                    <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10">
-                      <Icon className="h-7 w-7 text-primary" strokeWidth={1.75} />
+                    <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 max-md:mb-4 md:mb-6 md:h-14 md:w-14">
+                      <Icon className="h-6 w-6 text-primary max-md:h-6 max-md:w-6 md:h-7 md:w-7" strokeWidth={1.75} />
                     </div>
 
-                    <h3 className="text-3xl md:text-4xl font-bold tracking-tight text-[#08284e]">
+                    <h3 className="text-2xl font-bold tracking-tight text-[#08284e] max-md:text-balance max-md:text-white sm:text-3xl md:text-4xl">
                       {p.title}
                     </h3>
                     <p className="mt-2 text-primary font-semibold">
                       {p.subtitle}
                     </p>
-                    <p className="mt-5 text-base md:text-lg leading-relaxed text-[#08284e]/70">
+                    <p className="mt-5 text-base leading-relaxed text-[#08284e]/70 max-md:text-white/90 md:text-lg">
                       {p.description}
                     </p>
 
-                    <div className="mt-8 flex flex-wrap gap-3">
+                    <div className="mt-6 flex flex-wrap gap-2 max-md:mt-5 md:mt-8 md:gap-3">
                       {p.bullets.map((b) => (
                         <div
                           key={b}
-                          className="rounded-full border border-[#08284e]/10 bg-white/70 backdrop-blur-sm px-4 py-2 text-sm font-medium text-[#08284e]"
+                          className="rounded-full border border-[#08284e]/10 bg-white/80 px-3.5 py-2 text-sm font-medium text-[#08284e] backdrop-blur-sm max-md:py-2 md:bg-white/70 md:px-4"
                         >
                           {b}
                         </div>
                       ))}
                     </div>
 
-                    <div className="mt-10">
+                    <div className="mt-8 max-md:mt-6 md:mt-10">
                       <a
                         href={p.ctaLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3 font-semibold text-primary-foreground transition-all hover:brightness-110 hover:scale-105"
+                        className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-7 py-3 font-semibold text-primary-foreground transition-all hover:brightness-110 hover:scale-105 max-md:max-w-sm max-md:py-3.5 sm:w-auto"
                       >
                         {p.ctaLabel}
                         <ArrowRight size={16} />

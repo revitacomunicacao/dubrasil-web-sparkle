@@ -5,10 +5,10 @@ import IdentificacaoCard from "@/components/jornadas/IdentificacaoCard";
 
 const NossasSolucoesJornadas = () => {
   return (
-    <section id="solucoes" className="bg-background py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="solucoes" className="bg-background py-14 max-md:py-12 sm:py-32 md:py-24">
+      <div className="mx-auto max-w-7xl px-4 max-md:px-4 sm:px-6">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-foreground">
+          <h2 className="text-2xl font-bold tracking-tight text-foreground max-md:text-balance sm:text-4xl md:text-5xl">
             Menos risco. Menos ajuste. Mais rotina e controle.
           </h2>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
@@ -19,7 +19,7 @@ const NossasSolucoesJornadas = () => {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-2">
+        <div className="mt-10 grid gap-6 max-md:mt-8 md:mt-16 md:grid-cols-2 md:gap-8">
           <ControlPontoCard />
           <AgroJornadasCard />
           <AcessoCard />

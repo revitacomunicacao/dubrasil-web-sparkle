@@ -43,7 +43,7 @@ const Hero = () => {
   const next = () => setCurrent((c) => (c + 1) % slides.length);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden bg-hero">
+    <section className="relative h-screen min-h-[520px] w-full overflow-hidden bg-hero max-md:h-[min(100dvh,720px)] max-lg:h-[min(100dvh,800px)]">
       {slides.map((slide, i) => (
         <div
           key={i}
@@ -57,20 +57,20 @@ const Hero = () => {
             muted
             loop
             playsInline
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover object-[50%_35%] md:object-center"
             onError={(e) => {
               // Hide video if it fails to load
               (e.target as HTMLVideoElement).style.display = 'none';
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/30 max-md:from-black/92 max-md:via-black/60 max-md:to-black/45 max-lg:from-black/88 max-lg:via-black/50" />
         </div>
       ))}
 
       {/* Content */}
-      <div className="relative z-10 h-full flex items-end pb-32">
-        <div className="container mx-auto">
-          <h1 className="text-[34px] md:text-[38px] lg:text-[50px] font-display tracking-tight text-white mb-4 max-w-2xl leading-[1.05]">
+      <div className="relative z-10 flex h-full items-end pb-32 max-md:px-4 max-md:pb-28 max-lg:pb-30">
+        <div className="container mx-auto px-4 md:px-6">
+          <h1 className="mb-4 max-w-2xl text-[28px] font-display leading-[1.08] tracking-tight text-white max-md:max-w-full max-lg:text-[32px] md:text-[38px] lg:text-[50px]">
             <span className="font-light">{slides[current].title} </span>
             {slides[current].highlight && (
               <span className="font-extrabold text-primary">
@@ -84,21 +84,21 @@ const Hero = () => {
       {/* Navigation arrows */}
       <button
         onClick={prev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white transition-colors"
+        className="absolute left-2 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/10 p-2 text-white backdrop-blur-sm transition-colors hover:bg-white/20 max-lg:left-3 md:left-4 md:p-3"
         aria-label="Anterior"
       >
-        <ChevronLeft size={24} />
+        <ChevronLeft size={20} className="md:h-6 md:w-6" />
       </button>
       <button
         onClick={next}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white transition-colors"
+        className="absolute right-2 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/10 p-2 text-white backdrop-blur-sm transition-colors hover:bg-white/20 max-lg:right-3 md:right-4 md:p-3"
         aria-label="Próximo"
       >
-        <ChevronRight size={24} />
+        <ChevronRight size={20} className="md:h-6 md:w-6" />
       </button>
 
       {/* Dots */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+      <div className="absolute bottom-6 left-1/2 z-20 flex -translate-x-1/2 gap-3 max-md:bottom-5 md:bottom-8">
         {slides.map((_, i) => (
           <button
             key={i}

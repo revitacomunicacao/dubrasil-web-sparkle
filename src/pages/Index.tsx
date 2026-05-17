@@ -11,7 +11,7 @@ import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 
 const Index = () => (
-  <div className="min-h-screen">
+  <div className="min-h-screen overflow-x-hidden">
     <Navbar />
     <Hero2 />
     <Hero />

@@ -16,13 +16,13 @@ const HeroJornadas = () => {
 
   return (
     <section
-      className="relative min-h-[100dvh] flex items-center overflow-hidden pt-20"
+      className="relative flex min-h-[100dvh] items-center overflow-hidden bg-cover bg-center pt-20 max-md:[background-position:center_25%] md:bg-center"
       style={{ backgroundImage: `url(${bg})` }}
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-[#001a34]/90 via-[#001a34]/50 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#001a34]/90 via-[#001a34]/50 to-transparent max-md:from-[#001a34]/95 max-md:via-[#001a34]/75" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent max-md:from-black/50 max-md:via-black/25" />
 
-      <div className="container mx-auto relative z-10 px-6 pb-16 pt-10">
+      <div className="container relative z-10 mx-auto px-4 pb-12 pt-8 max-md:px-4 md:px-6 md:pb-16 md:pt-10">
         <div className="grid items-center gap-10 md:grid-cols-2">
           <div className="max-w-xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-4 py-2 text-sm text-foreground/80 backdrop-blur">
@@ -30,7 +30,7 @@ const HeroJornadas = () => {
               DuBrasil Serviços
             </div>
 
-            <h1 className="mt-6 text-4xl font-bold leading-none tracking-tight text-white md:text-6xl">
+            <h1 className="mt-6 text-3xl font-bold leading-tight tracking-tight text-white max-md:text-balance sm:text-4xl md:text-6xl">
               Jornadas, Acessos e Identificação com Segurança Jurídica
             </h1>
 
@@ -40,12 +40,12 @@ const HeroJornadas = () => {
               — do controle de ponto ao controle de acesso.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-col gap-3 max-md:mt-6 sm:flex-row sm:flex-wrap sm:gap-4">
               <a
                 href={buildWhatsAppUrl(baseMessage)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-lg transition-all hover:brightness-110 hover:shadow-xl hover:scale-[1.02]"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-lg transition-all hover:brightness-110 hover:shadow-xl hover:scale-[1.02] sm:w-auto"
               >
                 Quero um diagnóstico agora
                 <MessageCircle size={18} />
@@ -55,7 +55,7 @@ const HeroJornadas = () => {
                 href={buildWhatsAppUrl(baseMessage)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-background/20 px-8 py-4 text-base font-semibold text-white/90 backdrop-blur transition-all hover:bg-background/30 hover:scale-[1.02]"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-border bg-background/20 px-8 py-4 text-base font-semibold text-white/90 backdrop-blur transition-all hover:bg-background/30 hover:scale-[1.02] sm:w-auto"
               >
                 Quero ser direcionado para a solução certa
               </a>

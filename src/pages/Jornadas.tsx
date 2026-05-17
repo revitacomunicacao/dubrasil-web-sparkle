@@ -8,7 +8,7 @@ import ContactFormDuBrasilServicos from "@/components/jornadas/ContactFormDuBras
 
 const JornadasPage = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <Navbar />
       <HeroJornadas />
       <NossasSolucoesJornadas />

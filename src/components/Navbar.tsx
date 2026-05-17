@@ -33,9 +33,9 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 max-md:px-4 md:px-6 md:py-4">
         <a href="#" className="flex items-center gap-2">
-          <img src={logo} alt="DuBrasil Soluções" className="h-14" />
+          <img src={logo} alt="DuBrasil Soluções" className="h-10 max-md:h-10 md:h-14" />
         </a>
 
         {/* Desktop */}
@@ -79,7 +79,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-background/95 backdrop-blur-xl border-t border-border px-6 pb-6 pt-2">
+        <div className="border-t border-border bg-background/95 px-4 pb-6 pt-2 backdrop-blur-xl max-md:max-h-[min(70vh,520px)] max-md:overflow-y-auto md:hidden">
           {navLinks.map((link) => (
             <a
               key={link.href}
