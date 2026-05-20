@@ -94,11 +94,11 @@ const SolucoesAlt = ({ content }: SolucoesAltProps) => {
                       <CmsLineBreakText text={p.descricao} />
                     </p>
 
-                    <div className="mt-6 flex flex-wrap gap-2 max-md:mt-5 md:mt-8 md:gap-3">
+                    <div className="mt-6 flex flex-col items-center gap-3 max-md:mt-5 md:mt-8 md:flex-row md:flex-wrap md:items-start md:justify-start md:gap-3">
                       {p.palavrasChave.map((b) => (
                         <div
                           key={b}
-                          className="rounded-full border border-[#08284e]/10 bg-white/80 px-3.5 py-2 text-sm font-medium text-[#08284e] backdrop-blur-sm max-md:py-2 md:bg-white/70 md:px-4"
+                          className="rounded-full border border-[#08284e]/10 bg-white/80 px-3.5 py-2 text-center text-sm font-medium text-[#08284e] backdrop-blur-sm max-md:w-full max-md:max-w-xs max-md:py-2.5 md:w-auto md:bg-white/70 md:px-4 md:text-left"
                         >
                           {b}
                         </div>

@@ -15,8 +15,11 @@ const Hero = ({ content }: HeroProps) => {
       className="relative flex min-h-screen items-center justify-center overflow-hidden bg-cover bg-center text-dark-foreground max-md:min-h-[85vh] max-md:[background-position:center_22%] max-lg:min-h-[90vh] max-lg:[background-position:center_28%]"
       style={{ backgroundImage: `url(${content.imagemFundo})` }}
     >
-      <div className="absolute inset-0 bg-black/75 max-md:bg-black/82 max-lg:bg-black/78" aria-hidden />
-      <div className="absolute inset-0 bg-gradient-to-br from-[#002147]/45 via-dark/90 to-primary/35 max-md:from-[#002147]/55 max-md:via-dark/92 max-lg:via-dark/91" />
+      <div className="absolute inset-0 bg-black/75 max-md:bg-black/88" aria-hidden />
+      <div
+        className="absolute inset-0 bg-gradient-to-br from-[#002147]/45 via-dark/90 to-primary/35 max-md:from-[#002147]/62 max-md:via-dark/94"
+        aria-hidden
+      />
 
       <div
         ref={ref}
